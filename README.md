@@ -9,8 +9,8 @@ Here are some ideas to get you started:-->
 - 👯 I’m looking to collaborate with anyone and everyone
 - 💬 Ask me about Football, Music or Coding. I can help you with these.
 - 📫 How to reach me: 
-    LinkedIn: https://www.linkedin.com/in/sayan-banerjee-13004621a/
-    Website: https://sayan112207.github.io/
+    LinkedIn: https://www.linkedin.com/in/sayan-banerjee-13004621a/<br>
+    Website: https://sayan112207.github.io/<br>
     Mail: @sayan112207@gmail.com
 - 😄 Pronouns: He/Him
 - ⚡ Fun fact: I actually do love Coding 😄
