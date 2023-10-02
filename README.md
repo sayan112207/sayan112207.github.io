@@ -7,7 +7,7 @@
 
 Here are some ideas to get you started:-->
 
-- 🔭 I’m currently working on the field of Machine Learning
+- 🔭 I’m currently working on the field of Machine Learning, Artificial Intelligence, Deep Learning, and Machine UnLearning
 - 👯 I’m looking to collaborate with anyone and everyone
 - 💬 Ask me about Football, Music or Coding. I can help you with these.
 - 📫 How to reach me: <br>
