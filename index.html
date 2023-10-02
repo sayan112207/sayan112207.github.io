@@ -1,0 +1,943 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+
+  <!-- Materialize - Compiled and minified CSS-->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <!-- Font Awesome Icon - CSS-->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <!-- Custom Styles-->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <title>Sayan Banerjee | ML Enthusiast</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126939217-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-126939217-2');
+  </script>
+
+  <!-- Open Graph-->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sayan Banerjee | Software Developer" />
+  <meta property="og:description" content="Software Developer" />
+  <meta property="og:url" content="https://sayan112207.github.io/" />
+  <meta property="og:site_name" content="Sayan Banerjee | Software Developer" />
+  <meta property="article:publisher" content="https://sayan112207.github.io/" />
+  <meta property="og:image" content="https://sayan112207.github.io/examples/preview.JPG" />
+
+  <meta name="author" content="Sayan Banerjee" />
+  <meta name="description" content="Software Developer with a passion for artificial intelligence." />
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/assets/img/favicon/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="index, follow">
+</head>
+
+<body>
+  <div id="preloader"></div>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGZH8HT" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <!-- Navigation Menu-->
+  <!-- Nav class 1 -->
+  <nav class="hide-on-small-only">
+    <ul class="side-nav fixed section table-of-contents">
+
+      <li class="logo">
+        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
+          class="brand-logo grey-blue-text">
+          <img src="assets\img\profile.jpeg" class="circle img-responsive profile-pic" alt="avatar">
+        </a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-person small"></i><span>About</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Experience section" href="#experience"
+          class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-trending-up small"></i><span>Experience</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
+            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Certificates section" href="#certificates"
+          class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-assessment small"></i><span>Certifications</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-school small"></i><span>Education</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
+            class="mdi-content-mail small"></i><span>Contact</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Open Sayan's resume in a new tab"
+          href="https://drive.google.com/file/d/1a9Gd2roEwVRdJdDxa2nHr2pv5Sh0xuzu/view?usp=sharing" target="_blank"
+          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Nav class 2 -->
+  <nav class="hide-on-large only trigger z-depth-1">
+    <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
+      class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    <div class="name-title">
+      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Sayan
+        Banerjee</a><span class="black-text">Software Developer</span>
+    </div>
+  </nav>
+
+  <!-- Nav class 3 -->
+  <nav class="hide-on-large only">
+    <ul id="slide-out" class="side-nav">
+      <li class="bold">
+        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-person small"></i><span>About</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Experience section" href="#experience"
+          class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-trending-up small"></i><span>Experience</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
+            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Certificates section" href="#certifcates"
+          class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-assessment small"></i><span>Certifications</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-school small"></i><span>Education</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
+            class="mdi-content-mail small"></i><span>Contact</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Open Sayan's Resume in a new tab"
+          href="https://drive.google.com/file/d/1a9Gd2roEwVRdJdDxa2nHr2pv5Sh0xuzu/view?usp=sharing" target="_blank"
+          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content-->
+  <main>
+    <!-- First Section: Heading lines and image -->
+    <section id="intro" class="section scrollspy full-height">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="col-md-9">
+          <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
+            <div class="caption">
+              <h2>Hi, I'm <span class="teal">Sayan Banerjee.</span></h2>
+              <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; color:#004d40"></span></h5>
+              <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
+              <h5>Self-driven, quick starter, passionate programmer with a curious mind who enjoys solving complex and
+                challenging real-world problems.</h5>
+            </div>
+            <div class="social">
+              <a href="https://www.linkedin.com/in/sayan-banerjee-13004621a/" target="_blank">
+                <button class="icon-btn linkedin">
+                  <i class="fa fa-linkedin"></i>
+                </button>
+              </a>
+              <a href="https://github.com/sayan112207/" target="_blank">
+                <button class="icon-btn github">
+                  <i class="fa fa-github"></i>
+                </button>
+              </a>
+
+            </div>
+            <div class='buttons'>
+              <a href="#about" class="readme">Read More</a>
+              <a href="#contact" class="contactme">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Second Section: About -->
+    <section id="about" class="section scrollspy">
+      <h3 class="page-title white-text teal">About</h3>
+      <div class="container flow-text">
+        <!-- <blockquote>
+          <h2>
+            A Software Developer with a passion for Backend Development and Artificial Intelligence.
+
+          </h2>
+        </blockquote> -->
+        <p>
+          I am a Computer Science Grad Student at KIIT University. I enjoy problem-solving and coding. Always strive to
+          bring 100% to the work I do.
+
+          I have worked on technologies like Python, HTML5, CSS, Java, C++, and C during my bachelor's.
+
+          I am passionate about developing complex applications that solve real-world problems impacting millions of
+          users.
+        </p>
+        <p>
+          <ul>
+            <li><b>Languages:</b> Python, Java, JavaScript, C, C++, HTML/CSS</li>
+            <li><b>Databases:</b> MySQL</li>
+            <li><b>Libraries:</b> NumPy, Pandas, OpenCV</li>
+            <li><b>Frameworks:</b> Flask, Django, Node.js, Keras, TensorFlow, PyTorch, Bootstrap</li>
+            <li><b>Tools & Technologies:</b> Git, Docker, AWS, GCP, Heroku, JIRA</li>
+          </ul>
+
+        </p>
+
+        <p>
+          Looking for an opportunity to work in a challenging position combining my skills in Software Engineering,
+          which provides professional development, interesting experiences and personal growth.
+        </p>
+
+        </p>
+      </div>
+    </section>
+
+
+    <!-- Third Section: Experience -->
+    <section id="experience" class="section scrollspy">
+      <h3 class="page-title white-text teal">Experience</h3>
+      <div class="container">
+
+        <!-- Latest Experience -->
+        <div class="card">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 m2">
+                <a href="https://dfccil.com/" target="_blank"><img alt="DFCCIL Logo" src="assets\img\dfccil-logo.png"
+                    class="responsive-img center-block" /></a>
+              </div>
+              <!-- <div class="col s12 m10"> -->
+              <div class="col s12 m10">
+                <p>
+                  <span class="card-title"><a href="https://dfccil.com/" target="_blank"
+                      class="teal-text hoverline">Dedicated Freight Corridor<br>Corporation of India Limited</a></span>
+                </p>
+              </div>
+            </div>
+            <div class="role brown-text text-darken-2">Internship Trainee</div>
+            <ul>
+              <li>
+                Successfully completed two key projects during DFCCIL internship:
+                <ol>
+                  <li>Developed and implemented Remote Person Detection-Recording System.</li>
+                  <li>Spearheaded the integration of IoT devices at Remote Location Units.</li>
+                </ol>
+              </li>
+              <li>Achieved substantial improvements in railway safety and efficiency through these projects.</li>
+              <li>Demonstrated strong technical and problem-solving skills in S&T department.</li>
+              <li>Collaborated effectively with cross-functional teams to ensure project success.</li>
+              <li>Received positive feedback and recognition for contributions to railway infrastructure enhancement.
+              </li>
+            </ul>
+          </div>
+          <div class="card-action">
+            <span>Jun 2023 - Jul 2023 | Ajmer, Rajasthan</span>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="card">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 m2">
+                <a href="https://codeclause.com/" target="_blank"><img alt="codeclause logo"
+                    src="assets\img\codeclause-logo.jpeg" class="responsive-img center-block" /></a>
+              </div>
+              <!-- <div class="col s12 m10"> -->
+              <div class="col s12 m10">
+                <p>
+                  <span class="card-title"><a href="https://codeclause.com/" target="_blank"
+                      class="teal-text hoverline">CodeClause</a></span>
+                </p>
+              </div>
+            </div>
+            <div class="role brown-text text-darken-2">Artificial Intelligence Intern</div>
+            <ul>
+              <li>Valuable contributor within the dynamic and innovative AI team at CodeClause.</li>
+              <li>Collaborated effectively with the company's AI department, leveraging teamwork and innovation.</li>
+              <li>Demonstrated the ability to work on diverse AI projects, showcasing adaptability and versatility.</li>
+              <li>Contributed to the advancement of AI technology and applications during the internship</li>
+            </ul>
+          </div>
+          <div class="card-action">
+            <span>Apr 2023 - May 2023 | Remote</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fourth Section: Projects -->
+    <section id="projects" class="section scrollspy">
+      <h3 class="page-title white-text teal">Projects</h3>
+      <div class="container">
+        <div class="row">
+
+          <!-- Smart Dustbin -->
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="Smart Dustbin" src="assets\img\trash-1991.gif" style="height: 100%; width: 100%"
+                  class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">Efficient Waste Collection and Filtration<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>
+                  IJSREM
+                </p>
+              </div>
+              <div class="card-reveal">
+                <!-- TODO: change this -- only close button -->
+                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
+                <span class="card-title grey-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+                <ul>
+                  <p><b>Abstract:</b> A research paper introducing a model for a smart
+                    dustbin that incorporates advanced technologies
+                    such as IoT and various sensors. These sensors are
+                    designed to monitor the fill level of the dustbin in
+                    real-time.<br>
+                    <b>DOI: 10.55041/IJSREM17403</b>
+                    <p>
+                </ul>
+                <div class="card-action">
+                  <a aria-label="Visit "
+                    href="https://ijsrem.com/download/efficient-waste-collection-and-filtration-using-iot/"
+                    target="_blank" data-position="top" data-tooltip="View Online"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                      class="fa fa-external-link"></i></a>
+                  <!--<a aria-label="Visit the GitHub repo for  project"
+                    href="https://github.com/sayan112207/Car-Price-Prediction" target="_blank" data-position="top"
+                    data-tooltip="View Source"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                      class="fa fa-github"></i></a>-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Driver Drowsiness Detection -->
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="Mask Detector" src="assets\img\drowsy.gif" style="height: 100%; width: 100%"
+                  class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">Driver Drowsiness Detection<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>
+                  A real time drowsy driver detection and alert system.</p>
+              </div>
+              <div class="card-reveal">
+                <!-- TODO: change this -- only close button -->
+                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
+                <span class="card-title grey-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+                <ul>
+                  <li><b>Tools:</b> PyTorch, OpenCV, Haar Cascade Classifier, Dlib, NumPy, SciPy</li>
+                  <li><b>Language:</b> Python</li>
+                </ul>
+                <div class="card-action">
+                  <a aria-label="Visit the GitHub repo for  project"
+                    href="https://github.com/sayan112207/Driver-Drowsiness-Detection" target="_blank"
+                    data-position="top" data-tooltip="View Source"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                      class="fa fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Volume Control -->
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="Wine image" src="assets\img\volume_control.gif" style="height: 100%; width: 100%"
+                  class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">Gesture Volume Control<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>A real-time hand gesture recognition system.</p>
+              </div>
+              <div class="card-reveal">
+                <!-- TODO: change this -- only close button -->
+                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
+                <span class="card-title teal-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+                <ul>
+                  <li><b>Tools:</b> OpenCV, MediaPipe, ctypes, comtypes, pycaw</li>
+                  <li><b>Language:</b> Python</li>
+
+                </ul>
+                <div class="card-action">
+                  <a aria-label="Visit the GitHub repo for  project"
+                    href="https://github.com/sayan112207/Gesture-Control-Volume" target="_blank" data-position="top"
+                    data-tooltip="View Source"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                      class="fa fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Heart Disease Detection -->
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="Screenshot of  web app" src="assets\img\heart.gif" style="height: 100%; width: 100%"
+                  class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">Heart Disease Prediction<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>A ML based web-application to predict heart risks with certain input parameters.
+                </p>
+              </div>
+              <div class="card-reveal">
+                <!-- TODO: change this -- only close button -->
+                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
+                <span class="card-title brown-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+                <ul>
+                  <li><b>Libraries:</b> Flask, os, io, numpy, PIL, keras</li>
+                  <li><b>Models:</b> Binary Classifier, Logistic Regression, SVM, XGBoost</li>
+                  <li><b>Language:</b> Python</li>
+
+                </ul>
+                <!-- TODO: UPLOAD THIS PROJECT ON GITHUB -->
+                <div class="card-action">
+                  <a aria-label="Visit " href="https://sayan112207-heart-disease-prediction-app-r91xr2.streamlit.app/"
+                    target="_blank" data-position="top" data-tooltip="View Online"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                      class="fa fa-external-link"></i></a>
+                  <a aria-label="Visit the GitHub repo for  project"
+                    href="https://github.com/sayan112207/Heart-Disease-Prediction" target="_blank" data-position="top"
+                    data-tooltip="View Source"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                      class="fa fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DermatoBot -->
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="Digital Clock photo" src="assets\img\skin.gif" style="height: 100%; width: 100%"
+                  class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">DermatoBot<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>
+                  A ML application to predict Skin Diseases.
+                </p>
+              </div>
+              <div class="card-reveal">
+                <!-- TODO: change this -- only close button -->
+                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
+                <span class="card-title brown-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+                <ul>
+                  <li><b>Libraries:</b> Flask, os, io, numpy, PIL, keras</li>
+                  <li><b>Language:</b> Python</li>
+
+                </ul>
+                <div class="card-action">
+                  <a aria-label="Visit the GitHub repo for  project"
+                    href="https://github.com/sayan112207/DermatoBot-SIH-1344" target="_blank" data-position="top"
+                    data-tooltip="View Source"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                      class="fa fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Forest Fire Prediction -->
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="Forest Fire Prediction" src="/assets/img/forest fire.gif" style="height: 100%; width: 100%"
+                  class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">Forest Fire Prediction Web-App<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>
+                  A web application using Streamlit to predict Forest Fire based on the parameters Oxygen, Humidity and
+                  Temperature.
+                </p>
+              </div>
+              <div class="card-reveal">
+                <!-- TODO: change this -- only close button -->
+                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
+                <span class="card-title brown-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+                <ul>
+                  <li>Implementing a Web-App using Logistic Regression Model</li>
+                  <li>Using external files(images, audios, etc) in our project.</li>
+                  <li>Building the interface of our Web Application using only Pyhton.</li>
+                </ul>
+                <div class="card-action">
+                  <a aria-label="Visit " href="https://sayan112207-forest-fire-app-6tceof.streamlit.app/"
+                    target="_blank" data-position="top" data-tooltip="View Online"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                      class="fa fa-external-link"></i></a>
+                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/sayan112207/Forest-Fire"
+                    target="_blank" data-position="top" data-tooltip="View Source"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                      class="fa fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- certifications -->
+    <section id="certificates" class="section scrollspy">
+      <h3 class="page-title white-text teal">Certificates</h3>
+      <div class="card">
+        <div class="card-content">
+          <div class="row text-left">
+            <div class="container">
+              <div class="row">
+
+                <div class="card">
+                  <div class="card-content">
+                    <div class="row">
+                      <div class="col s12 m2">
+                        <a href="https://www.hackerrank.com/certificates/dd7b6599a075" target="_blank"><img
+                            alt="HackerRank logo" src="/assets/img/hackerrank-logo.png"
+                            class="responsive-img center-block" /></a>
+                      </div>
+                      <!-- <div class="col s12 m10"> -->
+                      <div class="col s12 m10">
+                        <p>
+                          <span class="card-title"><a href="https://www.hackerrank.com/certificates/97d8a29bc61c"
+                              target="_blank" class="teal-text hoverline">Problem Solving</a></span>
+                          <b>
+                            <div>- HackerRank</div>
+                          </b>
+                          <div>Issued Aug 2023</div>
+                          <div>Credential ID: 97d8a29bc61c</div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-content">
+                    <div class="row">
+                      <div class="col s12 m2">
+                        <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=5F07AC09E3F8013FC63BF3692E1D4A50A50E72192ACC4FEE998E87C46865A273"
+                          target="_blank"><img alt="Oracle logo" src="assets\img\oracle.webp"
+                            class="responsive-img center-block" /></a>
+                      </div>
+                      <!-- <div class="col s12 m10"> -->
+                      <div class="col s12 m10">
+                        <p>
+                          <span class="card-title"><a
+                              href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=5F07AC09E3F8013FC63BF3692E1D4A50A50E72192ACC4FEE998E87C46865A273"
+                              target="_blank" class="teal-text hoverline">Certified Data Science Professional</a></span>
+                          <b>
+                            <div>- Oracle</div>
+                          </b>
+                          <div>Issued Jul 2023</div>
+                          <div>Credential ID: 303436259OCIDSP2023OPN</div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-content">
+                    <div class="row">
+                      <div class="col s12 m2">
+                        <a href="https://coursera.org/verify/specialization/X2W5WFMKQDHY" target="_blank"><img
+                            alt="Coursera logo" src="/assets/img/Coursera-Logo_600x600.png"
+                            class="responsive-img center-block" /></a>
+                      </div>
+                      <!-- <div class="col s12 m10"> -->
+                      <div class="col s12 m10">
+                        <p>
+                          <span class="card-title"><a href="https://coursera.org/verify/specialization/X2W5WFMKQDHY"
+                              target="_blank" class="teal-text hoverline">Machine Learning</a></span>
+                          <b>
+                            <div>- Coursera</div>
+                          </b>
+                          <div>Issued Mar 2023</div>
+                          <div>Credential ID: X2W5WFMKQDHY</div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-content">
+                    <div class="row">
+                      <div class="col s12 m2">
+                        <a href="https://www.udemy.com/certificate/UC-fcf84b3e-49ec-4a0b-a5c0-aeabe49d00a4/"
+                          target="_blank"><img alt="Udemy logo" src="/assets/img/udemy logo.png"
+                            class="responsive-img center-block" /></a>
+                      </div>
+                      <!-- <div class="col s12 m10"> -->
+                      <div class="col s12 m10">
+                        <p>
+                          <span class="card-title"><a
+                              href="https://www.udemy.com/certificate/UC-fcf84b3e-49ec-4a0b-a5c0-aeabe49d00a4/"
+                              target="_blank" class="teal-text hoverline">Applied Python</a></span>
+                          <b>
+                            <div>- Udemy</div>
+                          </b>
+                          <div>Issued Dec 2022</div>
+                          <div>Credential ID: UC-fcf84b3e-49ec-4a0b-a5c0-aeabe49d00a4</div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-content">
+                    <div class="row">
+                      <div class="col s12 m2">
+                        <a href="https://www.hackerrank.com/certificates/752c3dec457e" target="_blank"><img
+                            alt="HackerRank logo" src="/assets/img/hackerrank-logo.png"
+                            class="responsive-img center-block" /></a>
+                      </div>
+                      <!-- <div class="col s12 m10"> -->
+                      <div class="col s12 m10">
+                        <p>
+                          <span class="card-title"><a href="https://www.hackerrank.com/certificates/752c3dec457e"
+                              target="_blank" class="teal-text hoverline">Java</a></span>
+                          <b>
+                            <div>- HackerRank</div>
+                          </b>
+                          <div>Issued Sep 2022</div>
+                          <div>Credential ID: 752c3dec457e</div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-content">
+                    <div class="row">
+                      <div class="col s12 m2">
+                        <a href="https://www.hackerrank.com/certificates/3de4b5b6709a" target="_blank"><img
+                            alt="HackerRank logo" src="/assets/img/hackerrank-logo.png"
+                            class="responsive-img center-block" /></a>
+                      </div>
+                      <!-- <div class="col s12 m10"> -->
+                      <div class="col s12 m10">
+                        <p>
+                          <span class="card-title"><a href="https://www.hackerrank.com/certificates/3de4b5b6709a"
+                              target="_blank" class="teal-text hoverline">Python</a></span>
+                          <b>
+                            <div>- HackerRank</div>
+                          </b>
+                          <div>Issued Aug 2022</div>
+                          <div>Credential ID: 3DE4B5B6709A</div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-content">
+                    <div class="row">
+                      <div class="col s12 m2">
+                        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/J.P.%20Morgan/R5iK7HMxJGBgaSbvk_J.P.%20Morgan_9jsrirpydg4zM2XQg_1658168340992_completion_certificate.pdf"
+                          target="_blank"><img alt="JP Morgan Chase logo" src="/assets/img/JP_Morgan_logo.png"
+                            class="responsive-img center-block" /></a>
+                      </div>
+                      <!-- <div class="col s12 m10"> -->
+                      <div class="col s12 m10">
+                        <p>
+                          <span class="card-title"><a
+                              href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/J.P.%20Morgan/R5iK7HMxJGBgaSbvk_J.P.%20Morgan_9jsrirpydg4zM2XQg_1658168340992_completion_certificate.pdf"
+                              target="_blank" class="teal-text hoverline">Software Engineering Virtual
+                              Experience</a></span>
+                          <b>
+                            <div>- JP Morgan Chase & Co.</div>
+                          </b>
+                          <div>Issued July 2022</div>
+                          <div>Credential ID: viQCGsuPGLpwwWb99</div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-content">
+                    <div class="row">
+                      <div class="col s12 m2">
+                        <a href="https://www.myamcat.com/certificate/25011457/software-development-trainee/166"
+                          target="_blank"><img alt="Coursera logo" src="/assets/img/amcat.jpg"
+                            class="responsive-img center-block" /></a>
+                      </div>
+                      <!-- <div class="col s12 m10"> -->
+                      <div class="col s12 m10">
+                        <p>
+                          <span class="card-title"><a
+                              href="https://www.myamcat.com/certificate/25011457/software-development-trainee/166"
+                              target="_blank" class="teal-text hoverline">Software Development Trainee</a></span>
+                          <b>
+                            <div>- Aspiring Minds</div>
+                          </b>
+                          <div>Issued May 2022</div>
+                          <div>Credential ID: 25011457-166</div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-content">
+                    <div class="row">
+                      <div class="col s12 m2">
+                        <a href="https://insidesherpa.s3.amazonaws.com/completion-certificates/Accenture%20Nordics/PxenP4rHNE6Bh4nQz_Accenture%20Nordic_9jsrirpydg4zM2XQg_1644474087554_completion_certificate.pdf"
+                          target="_blank"><img alt="Accenture logo" src="/assets/img/accenture-logo.png"
+                            class="responsive-img center-block" /></a>
+                      </div>
+                      <!-- <div class="col s12 m10"> -->
+                      <div class="col s12 m10">
+                        <p>
+                          <span class="card-title"><a
+                              href="https://insidesherpa.s3.amazonaws.com/completion-certificates/Accenture%20Nordics/PxenP4rHNE6Bh4nQz_Accenture%20Nordic_9jsrirpydg4zM2XQg_1644474087554_completion_certificate.pdf"
+                              target="_blank" class="teal-text hoverline">Developer Program</a></span>
+                          <b>
+                            <div>- Accenture</div>
+                          </b>
+                          <div>Issued Feb 2022</div>
+                          <div>Credential ID: 2SKh8TCEWvM7LK5GB</div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    </div>
+    </section>
+
+    <!-- Seventh Section: Education -->
+    <!-- B. Tech -->
+    <section id="education" class="section scrollspy">
+      <h3 class="page-title white-text teal">Education</h3>
+      <div class="container">
+
+        <div class="row">
+          <div class="card">
+            <div class="card-content">
+              <div class="row">
+                <div class="col s12 m2">
+                  <a href="https://kiit.ac.in/" target="_blank"><img alt="KIIT logo" src="/assets/img/kiit logo.png"
+                      class="responsive-img center-block" /></a>
+                </div>
+                <!-- <div class="col s12 m10"> -->
+                <div class="col s12 m10">
+                  <p>
+                    <span class="card-title"><a href="https://kiit.ac.in/" target="_blank"
+                        class="teal-text hoverline">Kalinga Institute of Industrial Technology</a></span>
+                    <div>Bachelor of Technology<br>Computer Science and Engineering</div>
+                  </p>
+                </div>
+              </div>
+              <div class="role brown-text text-darken-2">CGPA: 8.73</div>
+            </div>
+            <div class="card-action">
+              <span>Sept 2021 - Present | Bhubaneswar, India</span>
+            </div>
+          </div>
+
+          <!-- Class 12 -->
+          <div class="card">
+            <div class="card-content">
+              <div class="row">
+                <div class="col s12 m2">
+                  <a href="https://srichaitanyaschool.net/" target="_blank"><img alt="Chaitanya logo"
+                      src="/assets/img/chaitanya logo.png" class="responsive-img center-block" /></a>
+                </div>
+                <!-- <div class="col s12 m10"> -->
+                <div class="col s12 m10">
+                  <p>
+                    <span class="card-title"><a href="https://srichaitanyaschool.net/" target="_blank"
+                        class="teal-text hoverline">Sri Chaitanya Techno School</a></span>
+                    <div>All India Senior School Certificate Examination</div>
+                  </p>
+                </div>
+              </div>
+              <div class="role brown-text text-darken-2">Percentage: 93%</div>
+            </div>
+            <div class="card-action">
+              <span>Apr 2019 - March 2021 | Visakhapatnam, India</span>
+            </div>
+          </div>
+
+          <!-- Class 10 -->
+          <div class="card">
+            <div class="card-content">
+              <div class="row">
+                <div class="col s12 m2">
+                  <a href="http://stpatricksschoolasansol.in/" target="_blank"><img alt="SPS logo"
+                      src="/assets/img/sps-logo.png" class="responsive-img center-block" /></a>
+                </div>
+                <!-- <div class="col s12 m10"> -->
+                <div class="col s12 m10">
+                  <p>
+                    <span class="card-title"><a href="http://stpatricksschoolasansol.in/" target="_blank"
+                        class="teal-text hoverline">St. Patrick's Higher Secondary School</a></span>
+                    <div>All India Secondary School Examination</div>
+                  </p>
+                </div>
+              </div>
+              <div class="role brown-text text-darken-2">Percentage: 92%</div>
+            </div>
+            <div class="card-action">
+              <span>Apr 2018 - March 2019 | Asansol, India</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Eight Section: Contact -->
+    <section id="contact" class="section scrollspy full-height">
+      <h3 class="page-title white-text teal">Contact</h3>
+      <div class="container">
+        <p>
+          <a aria-label="Call Sayan" data-position="top" data-tooltip="Call Sayan"
+            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-phone"></i><a
+              aria-label="Call Varad">+91 9475979608</a></a>
+        </p>
+        <p>
+          <a aria-label="Email Sayan" href="mailto:sayan112207@gmail.com" target="_blank" data-position="top"
+            data-tooltip="Email Sayan" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+              class="fa fa-envelope"></i><a aria-label="Email Varad" href="mailto:sayan112207@gmail.com"
+              class="hoverline">sayan112207@gmail.com</a></a>
+        </p>
+        <p>
+          <a aria-label="View Sayan on GitHub" href="https://github.com/sayan112207" target="_blank" data-position="top"
+            data-tooltip="View Sayan on GitHub"
+            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-github"></i><a
+              aria-label="Varad on Github" href="https://github.com/sayan112207" class="hoverline"
+              target="_blank">github.com/sayan112207</a></a>
+        </p>
+        <p>
+          <a aria-label="View Sayan on LinkedIn" href="https://www.linkedin.com/in/sayan-banerjee-13004621a/"
+            target="_blank" data-position="top" data-tooltip="View Sayan on LinkedIn"
+            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+              class="fa fa-linkedin"></i><a aria-label="Sayan on LinkedIn"
+              href="https://www.linkedin.com/in/sayan-banerjee-13004621a/" class="hoverline"
+              target="_blank">linkedin.com/in/sayan-banerjee-13004621a</a></a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- typed.js -->
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script type="text/javascript">
+    var typed = new Typed('.typing', {
+      strings: ["Pythonist", "Developer", "Fast Learner"],
+      loop: true,
+      typeSpeed: 80,
+      backSpeed: 40
+    });
+  </script>
+
+
+  <!-- jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <!-- Materialize - Compiled and minified JavaScript-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+  <script>
+    // Materialize - Initializers
+    $(document).ready(function () {
+      $(".scrollspy").scrollSpy()
+      // Initialize collapse button
+      $(".button-collapse").sideNav({
+        menuWidth: 190, // Default is 240
+        edge: "left", // Choose the horizontal origin
+        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      })
+    })
+  </script>
+</body>
+
+</html>
