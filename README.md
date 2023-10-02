@@ -13,7 +13,7 @@ Here are some ideas to get you started:-->
 - 📫 How to reach me: <br>
     <ul><li>LinkedIn: https://www.linkedin.com/in/sayan-banerjee-13004621a/</li>
         <li>Website: https://sayan112207.github.io/</li>
-        <li>Mail: sayan112207@gmail.com</li></ul>
+        <li>Mail: https://sayan112207@gmail.com</li></ul>
 - 😄 Pronouns: He/Him
 - ⚡ Fun fact: I actually do love Coding 😄
 
