@@ -99,8 +99,8 @@ header {
 
 /* Logo Styling for Education and Experience Cards */
 .education-logo {
-  max-width: 40%;
-  height: 35%;
+  max-width: 8rem;
+  height: 8rem;
   display: block;
   margin: 15px auto 10px;
 }
