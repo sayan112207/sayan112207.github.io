@@ -11,7 +11,7 @@ Here are some ideas to get you started:-->
 - 👯 I’m looking to collaborate with anyone and everyone
 - 💬 Ask me about Football, Music or Coding. I can help you with these.
 - 📫 How to reach me: <br>
-    <ul><li>LinkedIn: https://www.linkedin.com/in/sayan-banerjee-13004621a/</li>
+    <ul><li>LinkedIn: https://www.linkedin.com/in/sayan18/</li>
         <li>Website: https://sayan112207.github.io/</li>
         <li>Mail: <a href="mailto:sayan112207@gmail.com">sayan112207@gmail.com</a></li></ul>
 - 😄 Pronouns: He/Him
