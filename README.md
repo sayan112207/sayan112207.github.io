@@ -12,7 +12,7 @@ Here are some ideas to get you started:-->
 - 💬 Ask me about Football, Music or Coding. I can help you with these.
 - 📫 How to reach me: <br>
     <ul><li>LinkedIn: https://www.linkedin.com/in/sayan18/</li>
-        <li>Website: https://sayan112207.github.io/</li>
+        <li>Website: https://sayanbanerjee.pages.dev/</li>
         <li>Mail: <a href="mailto:sayan112207@gmail.com">sayan112207@gmail.com</a></li></ul>
 - 😄 Pronouns: He/Him
 - ⚡ Fun fact: I actually do love Coding 😄
