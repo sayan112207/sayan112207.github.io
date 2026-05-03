@@ -17,11 +17,16 @@ document.addEventListener('DOMContentLoaded', function () {
   // ── Mobile nav toggle ───────────────────────────────────
   const navToggle = document.getElementById('navToggle');
   const navMenu   = document.getElementById('navMenu');
-  if (navToggle) {
-    navToggle.addEventListener('click', function () {
-      navMenu.classList.toggle('active');
-    });
-  }
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!event.target.closest('.navbar') && navMenu && navMenu.classList.contains('show')) {
+      const toggler = document.getElementById('navToggle');
+      if (toggler && toggler.getAttribute('aria-expanded') === 'true') {
+        toggler.click();
+      }
+    }
+  });
 
   // ── Back-to-Top ─────────────────────────────────────────
   const backToTopButton = document.getElementById('backToTop');
@@ -56,15 +61,32 @@ document.addEventListener('DOMContentLoaded', function () {
       const target = document.querySelector(this.getAttribute('href'));
       if (!target) return;
       e.preventDefault();
-      const headerOffset   = document.querySelector('header')?.offsetHeight ?? 80;
+      
+      // Calculate target position using a fixed header offset 
+      // instead of dynamic offsetHeight which changes during menu animation.
+      const headerOffset = 120;
       const elementPosition = target.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({ top: elementPosition - headerOffset - 12, behavior: 'smooth' });
+      
+      // Scroll to the element, adding extra breathing room (40px) so headings aren't cut off
+      window.scrollTo({ top: elementPosition - headerOffset - 40, behavior: 'smooth' });
+
+      // Close mobile menu if open AFTER scroll has been initiated
+      if (navMenu && navMenu.classList.contains('show') && this.closest('.nav-menu')) {
+        const toggler = document.getElementById('navToggle');
+        if (toggler && toggler.getAttribute('aria-expanded') === 'true') {
+          // A tiny timeout prevents the collapse animation from interfering with the scroll start
+          setTimeout(() => toggler.click(), 50);
+        }
+      }
 
       // Highlight target card if clicked from impact chip
       const isContextJump = this.classList.contains('exp-impact-chip') || this.classList.contains('metric-card');
       
       if (isContextJump && target.classList.contains('case-card')) {
-        savedContextY = window.scrollY;
+        // Calculate exact absolute position to return to, centered on screen
+        const clickedElementTop = this.getBoundingClientRect().top + window.scrollY;
+        savedContextY = clickedElementTop - (window.innerHeight / 2) + (this.offsetHeight / 2);
+        
         isContextActive = true;
         isJumpingToContext = true;
         hideReturnContext(); // Hide immediately if making a new jump
@@ -73,12 +95,15 @@ document.addEventListener('DOMContentLoaded', function () {
         void target.offsetWidth; 
         target.classList.add('highlight-target');
         
-        // Wait for smooth scroll to finish before showing button
-        setTimeout(() => {
-          isJumpingToContext = false;
-          lastGlobalScrollY = window.scrollY;
-          showReturnContext(false); // Enable 5s timeout initially
-        }, 850);
+        // Fallback in case scroll events don't fire
+        clearTimeout(jumpScrollTimeout);
+        jumpScrollTimeout = setTimeout(() => {
+          if (isJumpingToContext) {
+            isJumpingToContext = false;
+            lastGlobalScrollY = window.scrollY;
+            showReturnContext(false);
+          }
+        }, 2500);
       }
     });
   });
@@ -93,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let lastGlobalScrollY = window.scrollY;
   let isContextActive = false;
   let isJumpingToContext = false;
+  let jumpScrollTimeout = null;
 
   function hideReturnContext() {
     if (!returnWrapper) return;
@@ -130,7 +156,18 @@ document.addEventListener('DOMContentLoaded', function () {
   // Scroll visibility rules
   window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
-    if (!isContextActive || isJumpingToContext) {
+    
+    if (isJumpingToContext) {
+      clearTimeout(jumpScrollTimeout);
+      jumpScrollTimeout = setTimeout(() => {
+        isJumpingToContext = false;
+        lastGlobalScrollY = window.scrollY;
+        showReturnContext(false);
+      }, 400); // Increased to 400ms to handle mobile scroll throttling gaps
+      return;
+    }
+    
+    if (!isContextActive) {
       lastGlobalScrollY = currentScrollY;
       return;
     }
@@ -351,34 +388,36 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ── Theme Toggle (Dark Mode) ──
-  const themeToggle = document.getElementById('themeToggle');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
+  const themeCheckboxes = document.querySelectorAll('.theme-checkbox');
+
   // Initialize theme
   function initTheme() {
     const savedTheme = localStorage.getItem('sayan-theme');
-    if (savedTheme === 'dark' || (!document.documentElement.hasAttribute('data-theme') && prefersDark && !savedTheme)) {
+    if (savedTheme === 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark');
-      if (themeToggle) themeToggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+      themeCheckboxes.forEach(cb => cb.checked = true);
     } else {
       document.documentElement.removeAttribute('data-theme');
-      if (themeToggle) themeToggle.innerHTML = '<i class="fa fa-moon-o"></i>';
+      themeCheckboxes.forEach(cb => cb.checked = false);
     }
   }
   
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      if (document.documentElement.getAttribute('data-theme') === 'dark') {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('sayan-theme', 'light');
-        themeToggle.innerHTML = '<i class="fa fa-moon-o"></i>';
-      } else {
+  themeCheckboxes.forEach(cb => {
+    cb.addEventListener('change', function() {
+      const isDark = this.checked;
+      
+      // Sync all theme checkboxes on the page
+      themeCheckboxes.forEach(box => box.checked = isDark);
+      
+      if (isDark) {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('sayan-theme', 'dark');
-        themeToggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('sayan-theme', 'light');
       }
     });
-  }
+  });
   
   initTheme(); // Run on load
 

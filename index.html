@@ -57,17 +57,31 @@
 <body>
   <!-- <p>Redirecting to pages.dev...</p> -->
   <header>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-xl">
       <div class="container header-container">
-        <div class="navbar-brand">
-          <h1>Sayan Banerjee</h1>
-          <p>APM · Growth & Experimentation</p>
+        <!-- Brand: name always visible, subtitle hidden on desktop -->
+        <div class="navbar-brand me-2" style="max-width: calc(100% - 120px);">
+          <h1 class="mb-0">Sayan Banerjee</h1>
+          <!-- <p class="d-xl-none mb-0 mt-1 subtitle-mobile">APM · Growth & Experimentation</p> -->
         </div>
-        <button id="navToggle" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+
+        <!-- Mobile: theme switch + hamburger always top-right -->
+        <div class="d-flex align-items-center gap-2 d-xl-none flex-shrink-0" style="margin-top: 2px;">
+          <label class="theme-switch" for="themeToggleMobile" aria-label="Toggle Dark Mode">
+            <input type="checkbox" id="themeToggleMobile" class="theme-checkbox">
+            <div class="slider round">
+              <i class="fa fa-sun-o sun-icon"></i>
+              <i class="fa fa-moon-o moon-icon"></i>
+            </div>
+          </label>
+          <button id="navToggle" class="navbar-toggler p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Desktop nav -->
         <div class="collapse navbar-collapse nav-menu" id="navMenu">
-          <ul class="navbar-nav ms-auto align-items-lg-center">
+          <ul class="navbar-nav ms-auto align-items-xl-center">
             <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
             <li class="nav-item"><a class="nav-link" href="#case-studies">Case Studies</a></li>
             <li class="nav-item"><a class="nav-link" href="#side-projects">Side Projects</a></li>
@@ -76,10 +90,16 @@
             <li class="nav-item"><a class="nav-link" href="#product-thinking">Product Thinking</a></li>
             <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
             <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-            <li class="nav-item ms-lg-3 mt-1 mt-lg-0 d-flex align-items-center">
-              <button id="themeToggle" class="theme-toggle text-start" aria-label="Toggle Dark Mode">
-                <i class="fa fa-moon-o"></i>
-              </button>
+            <li class="nav-item"><a class="nav-link" href="#blogs">Blogs</a></li>
+            <!-- Desktop theme toggle: rightmost item -->
+            <li class="nav-item ms-2 d-none d-xl-flex align-items-center">
+              <label class="theme-switch" for="themeToggleDesktop" aria-label="Toggle Dark Mode">
+                <input type="checkbox" id="themeToggleDesktop" class="theme-checkbox">
+                <div class="slider round">
+                  <i class="fa fa-sun-o sun-icon"></i>
+                  <i class="fa fa-moon-o moon-icon"></i>
+                </div>
+              </label>
             </li>
           </ul>
         </div>
@@ -120,6 +140,9 @@
           </a>
           <a href="https://theorg.com/org/workindia/org-chart/sayan-banerjee" target="_blank" title="The Org">
             <img src="assets/img/theorg_logo.jpeg" alt="The Org" style="width:26px; height:26px; object-fit:contain; vertical-align:middle; border-radius:4px; background:#fff; padding:2px;">
+          </a>
+          <a href="https://medium.com/@sayan112207" target="_blank" title="Medium">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px; fill: currentColor;"><title>Medium</title><path d="M4.21 0A4.201 4.201 0 0 0 0 4.21v15.58A4.201 4.201 0 0 0 4.21 24h15.58A4.201 4.201 0 0 0 24 19.79v-1.093c-.137.013-.278.02-.422.02-2.577 0-4.027-2.146-4.09-4.832a7.592 7.592 0 0 1 .022-.708c.093-1.186.475-2.241 1.105-3.022a3.885 3.885 0 0 1 1.395-1.1c.468-.237 1.127-.367 1.664-.367h.023c.101 0 .202.004.303.01V4.211A4.201 4.201 0 0 0 19.79 0Zm.198 5.583h4.165l3.588 8.435 3.59-8.435h3.864v.146l-.019.004c-.705.16-1.063.397-1.063 1.254h-.003l.003 10.274c.06.676.424.885 1.063 1.03l.02.004v.145h-4.923v-.145l.019-.005c.639-.144.994-.353 1.054-1.03V7.267l-4.745 11.15h-.261L6.15 7.569v9.445c0 .857.358 1.094 1.063 1.253l.02.004v.147H4.405v-.147l.019-.004c.705-.16 1.065-.397 1.065-1.253V6.987c0-.857-.358-1.094-1.064-1.254l-.018-.004zm19.25 3.668c-1.086.023-1.733 1.323-1.813 3.124H24V9.298a1.378 1.378 0 0 0-.342-.047Zm-1.862 3.632c-.1 1.756.86 3.239 2.204 3.634v-3.634z"/></svg>
           </a>
         </div>
         <div class="hero-ctas">
@@ -644,7 +667,7 @@
           <div class="project-card">
             <div class="project-card-top">
               <div class="project-icon">🚗</div>
-              <div class="project-metric-badge">10K+ Scenarios Optimised</div>
+              <div class="project-metric-badge">Evolved &gt; Programmed</div>
             </div>
             <div class="d-flex justify-content-between align-items-start mb-1">
               <h4 class="project-title">EvoDrive - Genetic Algorithm Simulation</h4>
@@ -1002,6 +1025,59 @@
           <strong>Nai Disha Free Education Society</strong> – Student Volunteer (Apr 2015 - Mar 2018)
         </li>
       </ul>
+    </section>
+
+    </section>
+
+    <!-- Blogs -->
+    <section id="blogs" class="mb-5 reveal">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="mb-0">Writing & Blogs</h2>
+        <a href="https://medium.com/@sayan112207" target="_blank" class="project-link d-none d-md-block" style="font-size: 0.95rem;">View Medium Profile →</a>
+      </div>
+      <p style="color: var(--text-2); margin-bottom: 24px; font-size: 0.95rem; line-height: 1.6;">
+        I regularly write about product management, building experimentation systems, and translating data science into actionable growth strategies. Here are some of my top articles.
+      </p>
+
+      <div class="row g-4">
+        <!-- Blog 1 -->
+        <div class="col-md-6">
+          <a href="https://medium.com/codex/finetuning-starcoder2-on-google-colab-t4-gpu-a7a416efde4e" target="_blank" style="text-decoration: none;">
+            <div class="case-card d-flex flex-column h-100" style="padding: 24px;">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h4 class="mb-0" style="font-size: 1.1rem; font-weight: 700; color: var(--text);">
+                  Fine-Tuning StarCoder2 on Google Colab (T4 GPU)
+                </h4>
+              </div>
+              <p style="color: var(--text-2); font-size: 0.9rem; flex-grow: 1; margin-bottom: 0;">
+                A hands-on guide to fine-tuning large code models using limited compute. Covers LoRA-based optimization, memory-efficient training, and practical trade-offs when working with Colab GPUs.
+              </p>
+              <div class="mt-3" style="color: var(--primary); font-weight: 600; font-size: 0.9rem;">Read Article →</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="col-md-6">
+          <a href="https://medium.com/@sayan112207/understanding-the-lottery-ticket-hypothesis-7d303f60616c" target="_blank" style="text-decoration: none;">
+            <div class="case-card d-flex flex-column h-100" style="padding: 24px;">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h4 class="mb-0" style="font-size: 1.1rem; font-weight: 700; color: var(--text);">
+                  Understanding the Lottery Ticket Hypothesis
+                </h4>
+              </div>
+              <p style="color: var(--text-2); font-size: 0.9rem; flex-grow: 1; margin-bottom: 0;">
+                Breaks down how sparse subnetworks can outperform full models, and what this means for efficient deep learning, model pruning, and scalable deployment strategies.
+              </p>
+              <div class="mt-3" style="color: var(--primary); font-weight: 600; font-size: 0.9rem;">Read Article →</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <div class="text-center mt-4 d-md-none">
+        <a href="https://medium.com/@sayan112207" target="_blank" class="btn-secondary-cta w-100">View All on Medium</a>
+      </div>
     </section>
 
   </main>
