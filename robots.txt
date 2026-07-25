@@ -1,7 +1,9 @@
-# Group 1
-User-agent: Googlebot
-Disallow: /nogooglebot/
+# https://sayanbanerjee.pages.dev/
+# Everything is public and crawlable, including AI/answer-engine agents.
+# /assets/ must stay allowed - Google needs the CSS, JS and fonts to render
+# the page. resume/index.html carries its own noindex; the PDF is crawlable.
 
-# Group 2
 User-agent: *
 Allow: /
+
+Sitemap: https://sayanbanerjee.pages.dev/sitemap.xml

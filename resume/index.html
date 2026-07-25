@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Resume</title>
+  <title>Resume | Sayan Banerjee</title>
+  <!-- Thin wrapper: the body is just an iframe of the PDF. Indexing it would
+       compete with the PDF itself under a generic title. "follow" is kept so
+       crawlers still traverse out; the PDF is listed directly in sitemap.xml. -->
+  <meta name="robots" content="noindex, follow">
   <style>
     html, body {
       margin: 0;

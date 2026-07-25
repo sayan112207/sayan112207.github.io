@@ -1,0 +1,64 @@
+# Sayan Banerjee — APM / Product & Growth
+
+> De facto Product Manager for WorkIndia's Candidate Growth team - owning the CLM roadmap end-to-end, prioritising on effort-vs-impact, and running the experiments that prove whether we moved acquisition, activation, or retention.
+
+Data Analyst serving as the de facto Product Manager for WorkIndia's Candidate
+Growth team, owning the CLM roadmap end-to-end. Based in Bangalore, India.
+Currently targeting Associate Product Manager roles.
+
+Every figure below is copied from the rendered page and matches the JSON-LD
+`@graph` embedded in the homepage. If the case studies change, regenerate
+this file rather than editing it by hand.
+
+## Product Case Studies
+
+- [WorkIndia - OTP Onboarding & Activation](https://sayanbanerjee.pages.dev/#wi-otp-case-card): Verification was the biggest activation drop-off - so logins skip OTP entirely on a saved token, and registrations run a four-channel fallback ladder. **Results: 96.3% OTP success, 96.6% 5-sec delivery, 98.2% login segment.**
+- [WorkIndia - Job Discovery & Apply Conversion](https://sayanbanerjee.pages.dev/#wi-discovery-case-card): The survey said WhatsApp, and the CTA won +30% - but apply rate was still short, so I built a click heatmap and found the real cause. **Results: +30% Lands-to-Apply, +6% applies (density), +8.1% applies (ranking).**
+- [WorkIndia - CLM Channel Efficiency & Lifecycle Growth](https://sayanbanerjee.pages.dev/#wi-clm-case-card): Spend was outgrowing DAU, so send-time became a contextual bandit rewarded on applications rather than opens - plus algorithm reuse and a new email channel. **Results: −23% cost per DAU, +17% DAU, ₹1.2L infra saved.**
+- [WorkIndia - Acquisition Funnel Experimentation](https://sayanbanerjee.pages.dev/#wi-acquisition-case-card): A 1M+ daily visitor funnel was being changed on intuition, so I installed a hypothesis → power → guardrail loop and gated rollout on significance. **Results: +6.2% Clicks-to-Leads, 1M+ daily visitors, Stat-sig rollout gate.**
+- [Hevo Data - Funnel Conversion Engine](https://sayanbanerjee.pages.dev/#hevo-case-card): Technical evaluators couldn't estimate cost before talking to sales - so I gave them a calculator, and a chatbot on the content pages that fed it. **Results: +9% qualified leads, 80+ ETL pipelines, 50+ blogs instrumented.**
+- [Samsung Prism - LLM Safety Guardian](https://sayanbanerjee.pages.dev/#samsung-case-card): Unexplained moderation flags were expensive to review - so every flag got an explanation grounded in the exact policy clause it allegedly violated. **Results: 86.3% accuracy, −40% false positives, 32,000+ documents.**
+
+## Experience
+
+- **WorkIndia** (May 2025 - Present) — Data Analyst — Growth & Product (CLM). De facto PM for Candidate Growth; owns the CLM roadmap across acquisition, activation and retention.
+- **Hevo Data** (Jun 2024 - Dec 2024) — Technical Research Analyst. 80+ distributed ETL pipelines; built a Snowflake pricing tool that lifted qualified leads 9%.
+- **Samsung Prism** (Nov 2023 - May 2024) — R&D Intern. Transformer classification and summarization plus RAG explainability for app policy moderation.
+
+## Experimentation Systems
+
+- **Notification Time Affinity Model (Contextual Thompson Sampling)** — Send-time as a contextual bandit - rewarded on downstream value, bounded by fatigue caps.
+- **A/B Design on a 1M+ Visitor Funnel** — Stated hypothesis, powered sample size, pre-declared guardrails, significance gate before rollout.
+- **Progressive Fallback Ladder (OTP)** — Channel recovery as a measured sequence - each rung ordered by evidence, measured on its own.
+- **Diagnose → Ship → Re-diagnose** — The loop for when your first fix works and the metric still doesn't move.
+- **Composite & Efficiency Metric Design** — Metrics built so a campaign can't win by sacrificing user trust, and so channels compare on one number.
+- **Segment Refresh → Copy Regeneration Loop** — A 14-day cycle that doesn't just re-bucket users - it regenerates the copy those users receive.
+
+## Independent Projects
+
+- [EvoDrive - Genetic Algorithm Simulation](https://shubhampatel001.github.io/EvoDrive-Genetic-Algorithm-for-Autonomous-Driving/): Can evolutionary algorithms solve pathfinding better than rule-based systems?
+- [Text-to-SQL (StarCoder2 Fine-tune)](https://huggingface.co/Sayan18/finetune_starcoder2): How cheap can you make an LLM that's actually good at SQL generation?
+- [Perplexa](https://github.com/sayan112207/Perplexa): A conversational engine capable of grounded, real-time web retrieval.
+- [Vehicle Movement Analysis & Insight Generation](https://github.com/Pushkar222-n/Intel-Unnati-project): Extracting structured, queryable data from unstructured video streams of vehicle traffic.
+
+## Publications
+
+- [Precision Agriculture: Digital Twins and Advanced Crop Recommendation](https://doi.org/10.48550/arXiv.2502.04054) — IEEE ICOCT 2025, 2025. DOI: 10.48550/arXiv.2502.04054
+- [Efficient Waste Collection and Filtration using IOT](https://doi.org/10.55041/IJSREM17403) — IJSREM, 2023. DOI: 10.55041/IJSREM17403
+
+## Writing
+
+- [Fine-Tuning StarCoder2 on Google Colab (T4 GPU)](https://medium.com/codex/finetuning-starcoder2-on-google-colab-t4-gpu-a7a416efde4e): A hands-on guide to fine-tuning large code models using limited compute. Covers LoRA-based optimization, memory-efficient training, and practical trade-offs when working with Colab GPUs.
+- [Understanding the Lottery Ticket Hypothesis](https://medium.com/@sayan112207/understanding-the-lottery-ticket-hypothesis-7d303f60616c): Breaks down how sparse subnetworks can outperform full models, and what this means for efficient deep learning, model pruning, and scalable deployment strategies.
+
+## Contact
+
+- Portfolio: https://sayanbanerjee.pages.dev/
+- Resume (PDF): https://sayanbanerjee.pages.dev/resume/Sayan_Banerjee_Resume.pdf
+- Email: sayan112207@gmail.com
+- LinkedIn: https://www.linkedin.com/in/sayan18/
+- GitHub: https://github.com/sayan112207
+- Medium: https://medium.com/@sayan112207
+- Google Scholar: https://scholar.google.com/citations?user=VOelkfcAAAAJ&hl=en
+- The Org: https://theorg.com/org/workindia/org-chart/sayan-banerjee
+- Hugging Face: https://huggingface.co/Sayan18
