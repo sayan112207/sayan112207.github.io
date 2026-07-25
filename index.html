@@ -10,23 +10,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sayan Banerjee | APM | Product & Growth</title>
+  <!-- Self-hosted fonts: preloaded so they land before first paint (kills the hero-sub CLS) -->
+  <link rel="preload" href="assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- style.css MUST stay last: Bootstrap sets body{font-family} at equal specificity,
+       so loading ours first lets Bootstrap's system-ui stack win and Inter never applies.
+       Font fetching is handled by the preload hints above, not by stylesheet order. -->
   <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- Preview Card -->
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Sayan Banerjee | APM | Product & Growth" />
-  <meta property="og:description" content="Data-driven Product Thinker building scalable growth and experimentation systems" />
-  <meta property="og:url" content="https://sayan112207.github.io/" />
+  <meta property="og:description" content="De facto PM for WorkIndia's Candidate Growth team — owning the CLM roadmap and shipping experiments across acquisition, activation, and retention." />
+  <meta property="og:url" content="https://sayanbanerjee.pages.dev/" />
   <meta property="og:site_name" content="Sayan Banerjee | APM Portfolio" />
-  <meta property="article:publisher" content="https://sayan112207.github.io/" />
-  <meta property="og:image" content="https://sayan112207.github.io/examples/preview.png" />
+  <meta property="article:publisher" content="https://sayanbanerjee.pages.dev/" />
+  <meta property="og:image" content="https://sayanbanerjee.pages.dev/examples/preview.png" />
 
   <!-- Favicon -->
   <meta name="author" content="Sayan Banerjee" />
-  <meta name="description" content="Data-driven Product Thinker building scalable growth and experimentation systems at the intersection of data, ML, and user behaviour." />
+  <meta name="description" content="De facto PM for WorkIndia's Candidate Growth team — owning the CLM roadmap and shipping experiments across acquisition, activation, and retention." />
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png" />
   <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png" />
@@ -45,6 +54,11 @@
   <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png" />
   <meta name="theme-color" content="#ffffff" />
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sayanbanerjee.pages.dev/">
+  <!-- Structured data: single @graph. Base URI matches rel=canonical above. -->
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"ProfilePage","@id":"https://sayanbanerjee.pages.dev/#profilepage","url":"https://sayanbanerjee.pages.dev/","name":"Sayan Banerjee | APM | Product & Growth","description":"De facto PM for WorkIndia's Candidate Growth team — owning the CLM roadmap and shipping experiments across acquisition, activation, and retention.","inLanguage":"en-US","primaryImageOfPage":"https://sayanbanerjee.pages.dev/examples/preview.png","dateModified":"2026-07-25","mainEntity":{"@id":"https://sayanbanerjee.pages.dev/#person"}},{"@type":"Person","@id":"https://sayanbanerjee.pages.dev/#person","name":"Sayan Banerjee","jobTitle":"Data Analyst — Growth & Product (CLM)","description":"De facto Product Manager for WorkIndia's Candidate Growth team - owning the CLM roadmap end-to-end, prioritising on effort-vs-impact, and running the experiments that prove whether we moved acquisition, activation, or retention.","email":"mailto:sayan112207@gmail.com","url":"https://sayanbanerjee.pages.dev/","image":"https://sayanbanerjee.pages.dev/examples/preview.png","address":{"@type":"PostalAddress","addressLocality":"Bangalore","addressCountry":"IN"},"worksFor":{"@id":"https://sayanbanerjee.pages.dev/#org-workindia"},"alumniOf":{"@id":"https://sayanbanerjee.pages.dev/#org-kiit"},"knowsAbout":["A/B Testing","Athena","Bandits/Thompson Sampling","Click Heatmap Analysis","Cohort & RFM Analysis","Competitive Benchmarking","Confluence","Dimensional Modelling","Effort–Impact Prioritization","Email","Experiment Design","Git","GitHub Projects","Hypothesis Testing","JIRA","KPI Tracking","Kafka","LLMs","Metabase","Metric Design","OTP Onboarding","Pandas","Product Docs (BRD/PRD/ARD/PIR)","Push","PySpark","Python","RAG","RCS","SEO","SMS","SQL","Snowflake","Stakeholder Management","User Research","WhatsApp"],"sameAs":["https://www.linkedin.com/in/sayan18/","https://github.com/sayan112207","https://medium.com/@sayan112207","https://scholar.google.com/citations?user=VOelkfcAAAAJ&hl=en","https://theorg.com/org/workindia/org-chart/sayan-banerjee","https://huggingface.co/Sayan18"]},{"@type":"Organization","@id":"https://sayanbanerjee.pages.dev/#org-workindia","name":"WorkIndia","url":"https://www.workindia.in/"},{"@type":"Organization","@id":"https://sayanbanerjee.pages.dev/#org-hevo","name":"Hevo Data","url":"https://hevodata.com/"},{"@type":"Organization","@id":"https://sayanbanerjee.pages.dev/#org-samsung","name":"Samsung Prism","url":"https://research.samsung.com/"},{"@type":"EducationalOrganization","@id":"https://sayanbanerjee.pages.dev/#org-kiit","name":"KIIT University","url":"https://kiit.ac.in/"},{"@type":"TechArticle","@id":"https://sayanbanerjee.pages.dev/#wi-otp-case-card","headline":"WorkIndia - OTP Onboarding & Activation","description":"Verification was the biggest activation drop-off - so logins skip OTP entirely on a saved token, and registrations run a four-channel fallback ladder.","abstract":"Measured outcomes: 96.3% OTP success, 96.6% 5-sec delivery, 98.2% login segment.","keywords":["Activation","Funnel Diagnosis","Vendor Strategy"],"author":{"@id":"https://sayanbanerjee.pages.dev/#person"},"about":{"@id":"https://sayanbanerjee.pages.dev/#org-workindia"},"isPartOf":{"@id":"https://sayanbanerjee.pages.dev/#profilepage"},"mainEntityOfPage":{"@id":"https://sayanbanerjee.pages.dev/#profilepage"},"inLanguage":"en-US"},{"@type":"TechArticle","@id":"https://sayanbanerjee.pages.dev/#wi-discovery-case-card","headline":"WorkIndia - Job Discovery & Apply Conversion","description":"The survey said WhatsApp, and the CTA won +30% - but apply rate was still short, so I built a click heatmap and found the real cause.","abstract":"Measured outcomes: +30% Lands-to-Apply, +6% applies (density), +8.1% applies (ranking).","keywords":["Conversion","User Research","Behavioural Analytics","Ranking"],"author":{"@id":"https://sayanbanerjee.pages.dev/#person"},"about":{"@id":"https://sayanbanerjee.pages.dev/#org-workindia"},"isPartOf":{"@id":"https://sayanbanerjee.pages.dev/#profilepage"},"mainEntityOfPage":{"@id":"https://sayanbanerjee.pages.dev/#profilepage"},"inLanguage":"en-US"},{"@type":"TechArticle","@id":"https://sayanbanerjee.pages.dev/#wi-clm-case-card","headline":"WorkIndia - CLM Channel Efficiency & Lifecycle Growth","description":"Spend was outgrowing DAU, so send-time became a contextual bandit rewarded on applications rather than opens - plus algorithm reuse and a new email channel.","abstract":"Measured outcomes: −23% cost per DAU, +17% DAU, ₹1.2L infra saved.","keywords":["Growth","Bandits","Cost Efficiency","Lifecycle"],"author":{"@id":"https://sayanbanerjee.pages.dev/#person"},"about":{"@id":"https://sayanbanerjee.pages.dev/#org-workindia"},"isPartOf":{"@id":"https://sayanbanerjee.pages.dev/#profilepage"},"mainEntityOfPage":{"@id":"https://sayanbanerjee.pages.dev/#profilepage"},"inLanguage":"en-US"},{"@type":"TechArticle","@id":"https://sayanbanerjee.pages.dev/#wi-acquisition-case-card","headline":"WorkIndia - Acquisition Funnel Experimentation","description":"A 1M+ daily visitor funnel was being changed on intuition, so I installed a hypothesis → power → guardrail loop and gated rollout on significance.","abstract":"Measured outcomes: +6.2% Clicks-to-Leads, 1M+ daily visitors, Stat-sig rollout gate.","keywords":["Experimentation","Statistics","Acquisition"],"author":{"@id":"https://sayanbanerjee.pages.dev/#person"},"about":{"@id":"https://sayanbanerjee.pages.dev/#org-workindia"},"isPartOf":{"@id":"https://sayanbanerjee.pages.dev/#profilepage"},"mainEntityOfPage":{"@id":"https://sayanbanerjee.pages.dev/#profilepage"},"inLanguage":"en-US"},{"@type":"TechArticle","@id":"https://sayanbanerjee.pages.dev/#hevo-case-card","headline":"Hevo Data - Funnel Conversion Engine","description":"Technical evaluators couldn't estimate cost before talking to sales - so I gave them a calculator, and a chatbot on the content pages that fed it.","abstract":"Measured outcomes: +9% qualified leads, 80+ ETL pipelines, 50+ blogs instrumented.","keywords":["Product Design","Conversion","Self-serve"],"author":{"@id":"https://sayanbanerjee.pages.dev/#person"},"about":{"@id":"https://sayanbanerjee.pages.dev/#org-hevo"},"isPartOf":{"@id":"https://sayanbanerjee.pages.dev/#profilepage"},"mainEntityOfPage":{"@id":"https://sayanbanerjee.pages.dev/#profilepage"},"inLanguage":"en-US"},{"@type":"TechArticle","@id":"https://sayanbanerjee.pages.dev/#samsung-case-card","headline":"Samsung Prism - LLM Safety Guardian","description":"Unexplained moderation flags were expensive to review - so every flag got an explanation grounded in the exact policy clause it allegedly violated.","abstract":"Measured outcomes: 86.3% accuracy, −40% false positives, 32,000+ documents.","keywords":["ML Systems","NLP","Anomaly Detection"],"author":{"@id":"https://sayanbanerjee.pages.dev/#person"},"about":{"@id":"https://sayanbanerjee.pages.dev/#org-samsung"},"isPartOf":{"@id":"https://sayanbanerjee.pages.dev/#profilepage"},"mainEntityOfPage":{"@id":"https://sayanbanerjee.pages.dev/#profilepage"},"inLanguage":"en-US"},{"@type":"TechArticle","@id":"https://medium.com/codex/finetuning-starcoder2-on-google-colab-t4-gpu-a7a416efde4e","url":"https://medium.com/codex/finetuning-starcoder2-on-google-colab-t4-gpu-a7a416efde4e","mainEntityOfPage":{"@type":"WebPage","@id":"https://medium.com/codex/finetuning-starcoder2-on-google-colab-t4-gpu-a7a416efde4e"},"headline":"Fine-Tuning StarCoder2 on Google Colab (T4 GPU)","description":"A hands-on guide to fine-tuning large code models using limited compute. Covers LoRA-based optimization, memory-efficient training, and practical trade-offs when working with Colab GPUs.","author":{"@id":"https://sayanbanerjee.pages.dev/#person"},"publisher":{"@type":"Organization","name":"Medium","url":"https://medium.com/"},"inLanguage":"en-US"},{"@type":"TechArticle","@id":"https://medium.com/@sayan112207/understanding-the-lottery-ticket-hypothesis-7d303f60616c","url":"https://medium.com/@sayan112207/understanding-the-lottery-ticket-hypothesis-7d303f60616c","mainEntityOfPage":{"@type":"WebPage","@id":"https://medium.com/@sayan112207/understanding-the-lottery-ticket-hypothesis-7d303f60616c"},"headline":"Understanding the Lottery Ticket Hypothesis","description":"Breaks down how sparse subnetworks can outperform full models, and what this means for efficient deep learning, model pruning, and scalable deployment strategies.","author":{"@id":"https://sayanbanerjee.pages.dev/#person"},"publisher":{"@type":"Organization","name":"Medium","url":"https://medium.com/"},"inLanguage":"en-US"},{"@type":"ScholarlyArticle","@id":"https://doi.org/10.48550/arXiv.2502.04054","url":"https://doi.org/10.48550/arXiv.2502.04054","headline":"Precision Agriculture: Digital Twins and Advanced Crop Recommendation","identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.48550/arXiv.2502.04054"},"sameAs":"https://doi.org/10.48550/arXiv.2502.04054","author":[{"@id":"https://sayanbanerjee.pages.dev/#person"},{"@type":"Person","name":"Aniruddha Mukherjee"},{"@type":"Person","name":"Suket Kamboj"}],"publisher":{"@type":"Organization","name":"IEEE ICOCT 2025"},"datePublished":"2025"},{"@type":"ScholarlyArticle","@id":"https://doi.org/10.55041/IJSREM17403","url":"https://doi.org/10.55041/IJSREM17403","headline":"Efficient Waste Collection and Filtration using IOT","identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.55041/IJSREM17403"},"sameAs":"https://doi.org/10.55041/IJSREM17403","author":[{"@id":"https://sayanbanerjee.pages.dev/#person"},{"@type":"Person","name":"Rahul Naugariya"},{"@type":"Person","name":"Shubham Patel"},{"@type":"Person","name":"Shubham Kumar"}],"publisher":{"@type":"Organization","name":"IJSREM"},"datePublished":"2023"},{"@type":"SoftwareSourceCode","@id":"https://shubhampatel001.github.io/EvoDrive-Genetic-Algorithm-for-Autonomous-Driving/","name":"EvoDrive - Genetic Algorithm Simulation","description":"Can evolutionary algorithms solve pathfinding better than rule-based systems?","codeRepository":"https://shubhampatel001.github.io/EvoDrive-Genetic-Algorithm-for-Autonomous-Driving/","author":{"@id":"https://sayanbanerjee.pages.dev/#person"},"programmingLanguage":"JavaScript"},{"@type":"SoftwareSourceCode","@id":"https://huggingface.co/Sayan18/finetune_starcoder2","name":"Text-to-SQL (StarCoder2 Fine-tune)","description":"How cheap can you make an LLM that's actually good at SQL generation?","codeRepository":"https://huggingface.co/Sayan18/finetune_starcoder2","author":{"@id":"https://sayanbanerjee.pages.dev/#person"},"programmingLanguage":"Python"},{"@type":"SoftwareSourceCode","@id":"https://github.com/sayan112207/Perplexa","name":"Perplexa","description":"A conversational engine capable of grounded, real-time web retrieval.","codeRepository":"https://github.com/sayan112207/Perplexa","author":{"@id":"https://sayanbanerjee.pages.dev/#person"},"programmingLanguage":"Python"},{"@type":"SoftwareSourceCode","@id":"https://github.com/Pushkar222-n/Intel-Unnati-project","name":"Vehicle Movement Analysis & Insight Generation","description":"Extracting structured, queryable data from unstructured video streams of vehicle traffic.","codeRepository":"https://github.com/Pushkar222-n/Intel-Unnati-project","author":{"@id":"https://sayanbanerjee.pages.dev/#person"},"programmingLanguage":"Python"}]}
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-08W8Y1M6EM"></script>
   <script>
@@ -82,15 +96,11 @@
         <!-- Desktop nav -->
         <div class="collapse navbar-collapse nav-menu" id="navMenu">
           <ul class="navbar-nav ms-auto align-items-xl-center">
-            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-            <li class="nav-item"><a class="nav-link" href="#case-studies">Case Studies</a></li>
-            <li class="nav-item"><a class="nav-link" href="#side-projects">Side Projects</a></li>
             <li class="nav-item"><a class="nav-link" href="#metrics">Impact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#case-studies">Case Studies</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
             <li class="nav-item"><a class="nav-link" href="#experimentation">Experimentation</a></li>
-            <li class="nav-item"><a class="nav-link" href="#product-thinking">Product Thinking</a></li>
-            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-            <li class="nav-item"><a class="nav-link" href="#blogs">Blogs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#side-projects">Projects</a></li>
             <!-- Desktop theme toggle: rightmost item -->
             <li class="nav-item ms-2 d-none d-xl-flex align-items-center">
               <label class="theme-switch" for="themeToggleDesktop" aria-label="Toggle Dark Mode">
@@ -115,14 +125,14 @@
     ════════════════════════════════════════════════════════════ -->
     <section id="hero" class="hero-section">
       <div class="hero-content">
-        <!-- <br><div class="hero-badge">Associate Product Manager</div><br> -->
         <h2 class="hero-headline">
           Data-driven Product Thinker building scalable
           <span class="hero-highlight">growth &amp; experimentation</span> systems
         </h2>
         <p class="hero-sub">
-          I sit at the intersection of <strong>data science, ML, and user behaviour</strong> —
-          turning raw signals into product decisions that drive measurable growth.
+          De facto <strong>Product Manager for WorkIndia's Candidate Growth team</strong> — owning the CLM roadmap
+          end-to-end. I prioritise with an effort-vs-impact framework, partner with engineering and design to ship,
+          and run the experiments that prove whether we moved <strong>acquisition, activation, or retention</strong>.
           I don't just analyse; I hypothesise, experiment, and close the loop.
         </p>
         <div class="hero-socials">
@@ -139,7 +149,7 @@
             <i class="fa fa-graduation-cap" style="color:#4885ed"></i>
           </a>
           <a href="https://theorg.com/org/workindia/org-chart/sayan-banerjee" target="_blank" title="The Org">
-            <img src="assets/img/theorg_logo.jpeg" alt="The Org" style="width:26px; height:26px; object-fit:contain; vertical-align:middle; border-radius:4px; background:#fff; padding:2px;">
+            <img width="52" height="52" src="assets/img/theorg-logo.webp" alt="The Org" style="width:26px; height:26px; object-fit:contain; vertical-align:middle; border-radius:4px; background:#fff; padding:2px;">
           </a>
           <a href="https://medium.com/@sayan112207" target="_blank" title="Medium">
             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px; fill: currentColor;"><title>Medium</title><path d="M4.21 0A4.201 4.201 0 0 0 0 4.21v15.58A4.201 4.201 0 0 0 4.21 24h15.58A4.201 4.201 0 0 0 24 19.79v-1.093c-.137.013-.278.02-.422.02-2.577 0-4.027-2.146-4.09-4.832a7.592 7.592 0 0 1 .022-.708c.093-1.186.475-2.241 1.105-3.022a3.885 3.885 0 0 1 1.395-1.1c.468-.237 1.127-.367 1.664-.367h.023c.101 0 .202.004.303.01V4.211A4.201 4.201 0 0 0 19.79 0Zm.198 5.583h4.165l3.588 8.435 3.59-8.435h3.864v.146l-.019.004c-.705.16-1.063.397-1.063 1.254h-.003l.003 10.274c.06.676.424.885 1.063 1.03l.02.004v.145h-4.923v-.145l.019-.005c.639-.144.994-.353 1.054-1.03V7.267l-4.745 11.15h-.261L6.15 7.569v9.445c0 .857.358 1.094 1.063 1.253l.02.004v.147H4.405v-.147l.019-.004c.705-.16 1.065-.397 1.065-1.253V6.987c0-.857-.358-1.094-1.064-1.254l-.018-.004zm19.25 3.668c-1.086.023-1.733 1.323-1.813 3.124H24V9.298a1.378 1.378 0 0 0-.342-.047Zm-1.862 3.632c-.1 1.756.86 3.239 2.204 3.634v-3.634z"/></svg>
@@ -155,191 +165,7 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════
-         EXPERIENCE SECTION
-    ════════════════════════════════════════════════════════════ -->
-    <section id="experience" class="reveal">
-      <h2>Experience</h2>
-      <p class="section-sub">Where I've worked, what I built, and the technical systems behind the results.</p>
-
-      <!-- ── WorkIndia ───────────────────────────────────────── -->
-      <div class="exp-role-card">
-        <div class="exp-role-header">
-          <div class="exp-role-left">
-            <img src="assets/img/workindia-logo.jpg" alt="WorkIndia" class="exp-role-logo">
-            <div>
-              <div class="exp-role-title">Data Analyst</div>
-              <div class="exp-role-company">WorkIndia</div>
-            </div>
-          </div>
-          <div class="exp-role-period">May 2025 - Present</div>
-        </div>
-
-        <div class="exp-role-body">
-          <p class="exp-role-summary">Working on the Candidate Growth team combining data engineering, ML feature work, and campaign automation to improve how job notifications reach and convert the right candidates.</p>
-
-          <div class="exp-role-cols">
-            <div class="exp-role-col">
-              <div class="exp-role-col-title">📊 Data & Analytics</div>
-              <ul>
-                <li>Built and maintained <strong>MySQL + Metabase dashboards</strong> tracking L0 notification funnel metrics (sent → delivered → read → clicked → applied) at daily, weekly, and segment granularity.</li>
-                <li>Authored <strong>complex Athena SQL</strong> queries joining event logs, user metadata, and campaign config tables to produce CPD (Cost per Download) and CPR (Cost per Registration) views across WhatsApp, push, and email channels.</li>
-                <li>Designed a <strong>star-schema data model</strong> (facts + dimensions) for the notification system, enabling ad-hoc metric queries without schema changes.</li>
-              </ul>
-            </div>
-            <div class="exp-role-col">
-              <div class="exp-role-col-title">⚙️ Systems & Automation</div>
-              <ul>
-                <li>Automated WhatsApp campaigns via <strong>cron-based segmentation pipelines</strong> scoring each user by engagement window (morning / afternoon / evening) using 30-day rolling event history.</li>
-                <li>Built an <strong>auto-refresh pipeline</strong> that re-evaluates user segment assignments every 14 days, detecting drift via a 20% engagement-window shift threshold.</li>
-                <li>Designed an <strong>Agentic Copy Writer</strong> pipeline using LLMs to generate personalised, on-brand notification copy per segment, structured output with character-limit guards, ready for direct injection into the campaign scheduler.</li>
-              </ul>
-            </div>
-            <div class="exp-role-col">
-              <div class="exp-role-col-title">🧠 ML & Modelling</div>
-              <ul>
-                <li>Built the <strong>Notification Time Affinity Model</strong>: a rule-based send-time scoring system that computes per-user engagement windows from historical event streams, reducing back-off to a single best-time-of-day approximation.</li>
-                <li>Analysed 2024 - 2025 tech job market trend data to derive <strong>demand-weighted job category signals</strong>, used to improve default targeting logic for cold-start users.</li>
-                <li>Developed <strong>weighted composite notification health metrics</strong> balancing CTR, application rate, and unsubscribe rate to prevent vanity metric optimisation in campaign scoring.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="exp-role-stack">
-            <span class="exp-stack-tag">MySQL</span>
-            <span class="exp-stack-tag">Athena SQL</span>
-            <span class="exp-stack-tag">Metabase</span>
-            <span class="exp-stack-tag">Python</span>
-            <span class="exp-stack-tag">Cron</span>
-            <span class="exp-stack-tag">WhatsApp API</span>
-            <span class="exp-stack-tag">LLMs</span>
-            <span class="exp-stack-tag">Data Modelling</span>
-          </div>
-
-          <div class="exp-role-impact">
-            <a href="#workindia-case-card" class="exp-impact-chip">+7% Engagement Efficiency</a>
-            <a href="#workindia-case-card" class="exp-impact-chip">+23% Budget Optimization</a>
-            <a href="#workindia-case-card" class="exp-impact-chip">+11% Targeting Relevance</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── Hevo Data ───────────────────────────────────────── -->
-      <div class="exp-role-card">
-        <div class="exp-role-header">
-          <div class="exp-role-left">
-            <img src="assets/img/hevo-logo.png" alt="Hevo Data" class="exp-role-logo">
-            <div>
-              <div class="exp-role-title">Research Analyst Intern</div>
-              <div class="exp-role-company">Hevo Data</div>
-            </div>
-          </div>
-          <div class="exp-role-period">June 2024 - Dec 2024</div>
-        </div>
-
-        <div class="exp-role-body">
-          <p class="exp-role-summary">Worked across data infrastructure, AI-powered product tooling, and content-driven conversion, building systems that turned technical evaluators into qualified leads.</p>
-
-          <div class="exp-role-cols">
-            <div class="exp-role-col">
-              <div class="exp-role-col-title">🔗 Data Infrastructure</div>
-              <ul>
-                <li>Administered <strong>80+ ETL/ELT pipelines</strong> in Hevo's platform covering real-time and batch workflows, with connector development via REST APIs and secure TCP/IP data channels.</li>
-                <li>Ensured <strong>data reliability for downstream marketing attribution</strong> maintaining pipeline health metrics and debugging connector-level failures across Snowflake, Redshift, and BigQuery destinations.</li>
-                <li>Worked with <strong>Snowflake's credit-based pricing model</strong> at depth including virtual warehouse sizing, query optimisation, and cost attribution per pipeline.</li>
-              </ul>
-            </div>
-            <div class="exp-role-col">
-              <div class="exp-role-col-title">🤖 AI Product Tooling</div>
-              <ul>
-                <li>Designed and built a <strong>context-sensitive support chatbot</strong> using LangChain + Gemini 1.5 Flash + FAISS vector retrieval deployed across 50+ technical blogs with sub-second retrieval latency.</li>
-                <li>Implemented <strong>fine-tuned prompt engineering</strong> with structured output constraints to keep responses within Hevo brand voice and within token limits across varied user queries.</li>
-                <li>Instrumented chatbot usage to identify <strong>top unanswered query patterns</strong> feeding insights back into content and documentation teams.</li>
-              </ul>
-            </div>
-            <div class="exp-role-col">
-              <div class="exp-role-col-title">📈 Growth & Conversion</div>
-              <ul>
-                <li>Led design and implementation of the <strong>Snowflake Pricing Calculator</strong> an interactive self-serve tool embedded at key mid-funnel content pages to reduce friction in the technical buyer journey.</li>
-                <li>Mapped the full <strong>technical evaluator → MQL conversion funnel</strong>, identifying pricing ambiguity as the primary drop-off driver which directly motivated the calculator feature.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="exp-role-stack">
-            <span class="exp-stack-tag">LangChain</span>
-            <span class="exp-stack-tag">Gemini 1.5 Flash</span>
-            <span class="exp-stack-tag">FAISS</span>
-            <span class="exp-stack-tag">Snowflake</span>
-            <span class="exp-stack-tag">REST APIs</span>
-            <span class="exp-stack-tag">Python</span>
-            <span class="exp-stack-tag">ETL/ELT</span>
-            <span class="exp-stack-tag">Redshift</span>
-          </div>
-
-          <div class="exp-role-impact">
-            <a href="#hevo-case-card" class="exp-impact-chip">+25% MQL Increase</a>
-            <a href="#hevo-case-card" class="exp-impact-chip">+15% User Retention</a>
-            <a href="#hevo-case-card" class="exp-impact-chip">50+ Blogs Instrumented</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── Samsung Prism ───────────────────────────────────── -->
-      <div class="exp-role-card">
-        <div class="exp-role-header">
-          <div class="exp-role-left">
-            <img src="assets/img/prism-logo.png" alt="Samsung Prism" class="exp-role-logo">
-            <div>
-              <div class="exp-role-title">Research &amp; Development Intern</div>
-              <div class="exp-role-company">Samsung Prism</div>
-            </div>
-          </div>
-          <div class="exp-role-period">Nov 2023 – May 2024</div>
-        </div>
-
-        <div class="exp-role-body">
-          <p class="exp-role-summary">Built ML systems for large-scale app policy violation detection combining transformer-based classification, anomaly detection, and RAG-based explainability to reduce false positive rates at scale.</p>
-
-          <div class="exp-role-cols">
-            <div class="exp-role-col">
-              <div class="exp-role-col-title">🧠 ML Modelling</div>
-              <ul>
-                <li>Fine-tuned <strong>Roberta-Large for multi-class policy violation classification</strong> on Samsung's proprietary app review dataset achieving 86.3% accuracy on a held-out test set.</li>
-                <li>Designed and ran the full <strong>ML training pipeline</strong>: data cleaning, label alignment, tokenisation, hyperparameter tuning (learning rate schedules, weight decay), and evaluation via confusion matrix + F1 breakdown by class.</li>
-                <li>Built <strong>monitoring systems</strong> to detect anomalies in 10K+ user interactions using statistical baselines + sliding window z-score alerts to flag unusual app behaviour patterns.</li>
-              </ul>
-            </div>
-            <div class="exp-role-col">
-              <div class="exp-role-col-title">🏗️ RAG Architecture</div>
-              <ul>
-                <li>Implemented a <strong>Retrieval-Augmented Generation (RAG) pipeline</strong> using Llama 3.2 1B as the base LLM enabling the system to generate natural-language explanations for violation flags, making moderation decisions auditable.</li>
-                <li>Built a <strong>policy document chunk index</strong> using dense retrieval so the LLM's generated explanations were grounded in specific policy clauses, not hallucinated.</li>
-                <li>Reduced <strong>false positives by 40%</strong> by layering the RAG-based explanation pass on top of the classifier output reviewer rejections of low-confidence flags dropped significantly.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="exp-role-stack">
-            <span class="exp-stack-tag">Roberta-Large</span>
-            <span class="exp-stack-tag">Llama 3.2</span>
-            <span class="exp-stack-tag">RAG</span>
-            <span class="exp-stack-tag">PyTorch</span>
-            <span class="exp-stack-tag">HuggingFace</span>
-            <span class="exp-stack-tag">Python</span>
-            <span class="exp-stack-tag">Anomaly Detection</span>
-          </div>
-
-          <div class="exp-role-impact">
-            <a href="#samsung-case-card" class="exp-impact-chip">86.3% Detection Accuracy</a>
-            <a href="#samsung-case-card" class="exp-impact-chip">−40% False Positives</a>
-            <a href="#samsung-case-card" class="exp-impact-chip">10K+ Interactions Monitored</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════════════
          IMPACT METRICS DASHBOARD
     ════════════════════════════════════════════════════════════ -->
     <section id="metrics" class="reveal">
@@ -347,169 +173,507 @@
       <p class="section-sub">Numbers that reflect decisions made, not just tasks completed.</p>
       <div class="row g-3 mt-2">
         <div class="col-sm-6 col-lg-3">
-          <a href="#workindia-case-card" class="metric-card text-decoration-none" style="display: block; color: inherit;">
-            <div class="metric-icon">📈</div>
-            <div class="metric-value" data-target="7" data-suffix="%">0%</div>
-            <div class="metric-label">Engagement Efficiency</div>
-            <div class="metric-context">via WhatsApp cron segmentation</div>
+          <a href="#wi-otp-case-card" class="metric-card text-decoration-none" style="display: block; color: inherit;">
+            <div class="metric-value" data-target="96" data-suffix=".3%" data-prefix="">0%</div>
+            <div class="metric-label">OTP Success Rate</div>
+            <div class="metric-context">up from 89.6% pre-redesign</div>
           </a>
         </div>
         <div class="col-sm-6 col-lg-3">
-          <a href="#workindia-case-card" class="metric-card text-decoration-none" style="display: block; color: inherit;">
-            <div class="metric-icon">💰</div>
-            <div class="metric-value" data-target="23" data-suffix="%">0%</div>
-            <div class="metric-label">Budget Optimization</div>
-            <div class="metric-context">CPD/CPR analysis across channels</div>
+          <a href="#wi-discovery-case-card" class="metric-card text-decoration-none" style="display: block; color: inherit;">
+            <div class="metric-value" data-target="30" data-suffix="%">0%</div>
+            <div class="metric-label">Lands-to-Apply</div>
+            <div class="metric-context">WhatsApp HR CTA on job cards</div>
           </a>
         </div>
         <div class="col-sm-6 col-lg-3">
-          <a href="#workindia-case-card" class="metric-card text-decoration-none" style="display: block; color: inherit;">
-            <div class="metric-icon">🎯</div>
-            <div class="metric-value" data-target="11" data-suffix="%">0%</div>
-            <div class="metric-label">Targeting Relevance</div>
-            <div class="metric-context">via job market trend modelling</div>
+          <a href="#wi-clm-case-card" class="metric-card text-decoration-none" style="display: block; color: inherit;">
+            <div class="metric-value" data-target="23" data-suffix="%" data-prefix="−">0%</div>
+            <div class="metric-label">Cost per DAU</div>
+            <div class="metric-context">contextual Thompson Sampling send-time</div>
           </a>
         </div>
         <div class="col-sm-6 col-lg-3">
-          <a href="#hevo-case-card" class="metric-card text-decoration-none" style="display: block; color: inherit;">
-            <div class="metric-icon">🤖</div>
-            <div class="metric-value" data-target="25" data-suffix="%">0%</div>
-            <div class="metric-label">MQL Increase</div>
-            <div class="metric-context">Snowflake Pricing Calculator, Hevo</div>
+          <a href="#wi-clm-case-card" class="metric-card text-decoration-none" style="display: block; color: inherit;">
+            <div class="metric-value" data-target="22" data-suffix="%">0%</div>
+            <div class="metric-label">Notification CTR</div>
+            <div class="metric-context">design-pattern redesign</div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <a href="#wi-discovery-case-card" class="metric-card text-decoration-none" style="display: block; color: inherit;">
+            <div class="metric-value" data-target="14" data-suffix=".1%">0%</div>
+            <div class="metric-label">Applies</div>
+            <div class="metric-context">listing density + relevancy ranking</div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <a href="#wi-clm-case-card" class="metric-card text-decoration-none" style="display: block; color: inherit;">
+            <div class="metric-value" data-target="17" data-suffix="%">0%</div>
+            <div class="metric-label">Daily Active Users</div>
+            <div class="metric-context">lifecycle initiatives for under-engaged cohorts</div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <a href="#wi-acquisition-case-card" class="metric-card text-decoration-none" style="display: block; color: inherit;">
+            <div class="metric-value" data-target="6" data-suffix=".2%">0%</div>
+            <div class="metric-label">Clicks-to-Leads</div>
+            <div class="metric-context">1M+ daily visitor acquisition funnel</div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <a href="#wi-clm-case-card" class="metric-card text-decoration-none" style="display: block; color: inherit;">
+            <div class="metric-value" data-target="8" data-suffix="x" data-prefix="">0x</div>
+            <div class="metric-label">Cheaper Email DAU</div>
+            <div class="metric-context">₹0.17 vs ₹1.3 cost-per-DAU</div>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════════════
          PRODUCT CASE STUDIES (Experience → transformed)
     ════════════════════════════════════════════════════════════ -->
     <section id="case-studies" class="reveal">
       <h2>Product Case Studies</h2>
       <p class="section-sub">How I've approached real problems — from hypothesis to impact.</p>
 
-      <!-- Case Study 1: WorkIndia -->
-      <div class="case-card mb-4" id="workindia-case-card">
+      <!-- Case Study 1: WorkIndia — OTP Onboarding & Activation -->
+      <div class="case-card mb-4" id="wi-otp-case-card">
         <div class="case-card-header">
           <div class="d-flex justify-content-between align-items-start mb-1">
-            <h3 class="case-title mb-0">WorkIndia - Performance Marketing Automation</h3>
+            <h3 class="case-title mb-0">WorkIndia - OTP Onboarding &amp; Activation</h3>
             <span class="read-metadata"><i class="fa fa-clock-o"></i> 3m read</span>
           </div>
           <div class="case-tags">
-            <span class="tag">Experimentation</span>
-            <span class="tag">Segmentation</span>
-            <span class="tag">Growth</span>
-            <span class="tag">ML</span>
+            <span class="tag">Activation</span>
+            <span class="tag">Funnel Diagnosis</span>
+            <span class="tag">Vendor Strategy</span>
           </div>
-          <button class="case-toggle-btn" data-target="wi-case" aria-expanded="false">
+
+          <div class="case-skim">
+            <p class="case-tldr">Verification was the biggest activation drop-off - so logins skip OTP entirely on a saved token, and registrations run a four-channel fallback ladder.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><strong>96.3%</strong><span>OTP success</span></div>
+              <div class="case-metric"><strong>96.6%</strong><span>5-sec delivery</span></div>
+              <div class="case-metric"><strong>98.2%</strong><span>login segment</span></div>
+            </div>
+            <div class="case-flow">
+              <span class="case-flow-step"><i>1</i>Diagnose</span>
+              <span class="case-flow-step"><i>2</i>Ladder</span>
+              <span class="case-flow-step"><i>3</i>Tokens</span>
+              <span class="case-flow-step"><i>4</i>2nd vendor</span>
+            </div>
+          </div>
+
+          <button class="case-toggle-btn" data-target="wi-otp-case" aria-expanded="false">
             Read Case Study <i class="fa fa-chevron-down"></i>
           </button>
         </div>
 
-        <div class="case-body" id="wi-case" style="display:none;">
+        <div class="case-body" id="wi-otp-case" style="display:none;">
           <div class="case-section">
-            <h4><span class="case-section-icon">🔍</span> Problem</h4>
-            <p>Candidates were being sent job notifications at suboptimal times and with generic copy, resulting in low open rates and poor click-to-apply conversion. Budget was being wasted on poorly targeted outreach.</p>
+            <h4>Problem</h4>
+            <p>Every candidate had to clear phone verification before doing anything else, and a meaningful share never got past it. Delivery-latency and user-behaviour analysis both pointed at OTP as the single largest activation bottleneck.</p>
           </div>
 
           <div class="case-section">
-            <h4><span class="case-section-icon">💡</span> Hypothesis</h4>
-            <p>If we personalise <em>when</em> and <em>to whom</em> we send notifications based on individual engagement history and job market signals, we will see a measurable lift in application rates without increasing overall notification volume.</p>
+            <h4>Hypothesis</h4>
+            <p>Failed verifications were a <em>delivery-channel sequencing</em> problem, not a user-intent one. Recover people on a second channel before they give up, and activation rises with no extra acquisition spend.</p>
           </div>
 
           <div class="case-section">
-            <h4><span class="case-section-icon">🔧</span> Approach</h4>
+            <h4>Approach</h4>
             <ul>
-              <li>Automated WhatsApp campaigns via <strong>cron jobs + user segmentation</strong> to send messages during each user's peak engagement window.</li>
-              <li>Analysed CPD (Cost per Download) and CPR (Cost per Registration) across channels to reallocate budget to highest-ROI segments.</li>
-              <li>Studied 2024–2025 tech job market trends to surface high-demand roles and improve default targeting logic.</li>
+              <li>Split the funnel by channel, vendor, and time-to-deliver to separate <strong>"never delivered"</strong> from <strong>"delivered too late"</strong> - identical in a conversion chart, opposite fixes.</li>
+              <li>Built a <strong>progressive recovery ladder</strong> - Primary SMS → WhatsApp → Secondary SMS → OTP Call - each rung firing on the previous one's failure, ordered by <strong>delivery success, then latency, then user effort</strong>.</li>
+              <li>Added <strong>saved login tokens</strong> so returning users re-authenticate in <strong>one tap</strong> (the Instagram / Flipkart / Zepto pattern), with a <strong>fixed TTL</strong> after which they re-enter the OTP funnel - plus a <strong>secondary SMS vendor</strong> for redundancy.</li>
             </ul>
           </div>
 
           <div class="case-section">
-            <h4><span class="case-section-icon">⚖️</span> Key Decisions</h4>
+            <h4>Key Decisions</h4>
             <ul>
-              <li><strong>Time-affinity over broadcast:</strong> Chose to compute individual send-time slots rather than a single best time for the cohort; more engineering work, but key for a diverse user base like ours.</li>
-              <li><strong>Downstream metric tracking:</strong> Anchored success on job applications, not open rate preventing optimization for vanity metrics.</li>
-              <li><strong>Budget reallocation ≠ budget cut:</strong> Improved allocation efficiency rather than reducing spend, maintaining reach while cutting waste.</li>
+              <li><strong>Sequence by expected success, not cost:</strong> a failed cheap send costs a user.</li>
+              <li><strong>Returning users shouldn't verify at all:</strong> removing the step beat optimising it - 98.2% on the login segment, ~56% of all volume.</li>
+              <li><strong>5-second delivery as its own guardrail:</strong> otherwise the funnel gets "fixed" by simply retrying more.</li>
+              <li><strong>A second vendor before a smarter algorithm:</strong> redundancy solved a failure class no routing logic could, and shipped faster.</li>
             </ul>
           </div>
 
           <div class="case-section">
-            <h4><span class="case-section-icon">📊</span> Impact</h4>
+            <h4>Impact</h4>
+            <div class="seg-table-wrap">
+              <table class="seg-table">
+                <thead>
+                  <tr><th>Verification metric</th><th>Before</th><th>After</th><th>Δ</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="seg-name">OTP success rate</td><td>89.6%</td><td>96.3%</td><td class="seg-delta">+6.7pp</td></tr>
+                  <tr><td class="seg-name">Delivered within 5 seconds</td><td>88.2%</td><td>96.6%</td><td class="seg-delta">+8.4pp</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="seg-table-wrap">
+              <table class="seg-table">
+                <thead>
+                  <tr><th>Segment</th><th>Volume weight</th><th>Before</th><th>After</th><th>Δ</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="seg-name">Login</td><td>~56%</td><td>89.6%</td><td>98.2%</td><td class="seg-delta">+8.6pp</td></tr>
+                  <tr><td class="seg-name">Register</td><td>~44%</td><td>89.6%</td><td>93.9%</td><td class="seg-delta">+4.3pp</td></tr>
+                  <tr class="seg-total"><td class="seg-name">Overall</td><td>100%</td><td>89.6%</td><td>96.3%</td><td class="seg-delta">+6.7pp</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="mt-3"><strong>Why "before" is identical across segments:</strong> everyone walked the same funnel - enter mobile → OTP delivered → enter code → verify - on a single vendor, inheriting its throughput issues with no fallback. Segment couldn't matter, because the path didn't differ.</p>
+            <p><strong>Why they diverge after:</strong> the two segments now take different paths.</p>
+            <ul>
+              <li><strong>Login (~56% of volume)</strong> re-authenticates on a <strong>saved token in one tap</strong> - the pattern Instagram, Flipkart, Zepto, and BigBasket use. No OTP is sent, so vendor delivery stops being a factor at all.</li>
+              <li><strong>Register (~44%)</strong> still goes through the OTP funnel - but the funnel itself got better, because the fallback ladder recovers the sends the primary vendor drops.</li>
+              <li><strong>Tokens carry a fixed TTL</strong>, so a login user returning after it expires lands back in the OTP funnel - and picks up the same ladder improvement as a registering user.</li>
+            </ul>
+          </div>
+
+          <div class="case-section">
+            <h4>What I'd Do Next</h4>
+            <ul>
+              <li>Route the first attempt by <strong>carrier and geography</strong>, and explore <strong>silent network-based verification</strong> so eligible users never see an OTP screen.</li>
+              <li>Measure <strong>activation-to-first-apply</strong> - verifying more users only matters if they go on to apply.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 2: WorkIndia — Job Discovery & Apply Conversion -->
+      <div class="case-card mb-4" id="wi-discovery-case-card">
+        <div class="case-card-header">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <h3 class="case-title mb-0">WorkIndia - Job Discovery &amp; Apply Conversion</h3>
+            <span class="read-metadata"><i class="fa fa-clock-o"></i> 4m read</span>
+          </div>
+          <div class="case-tags">
+            <span class="tag">Conversion</span>
+            <span class="tag">User Research</span>
+            <span class="tag">Behavioural Analytics</span>
+            <span class="tag">Ranking</span>
+          </div>
+
+          <div class="case-skim">
+            <p class="case-tldr">The survey said WhatsApp, and the CTA won +30% - but apply rate was <em>still</em> short, so I built a click heatmap and found the real cause.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><strong>+30%</strong><span>Lands-to-Apply</span></div>
+              <div class="case-metric"><strong>+6%</strong><span>applies (density)</span></div>
+              <div class="case-metric"><strong>+8.1%</strong><span>applies (ranking)</span></div>
+            </div>
+            <div class="case-flow">
+              <span class="case-flow-step"><i>1</i>Ask</span>
+              <span class="case-flow-step"><i>2</i>Ship</span>
+              <span class="case-flow-step"><i>3</i>Heatmap</span>
+              <span class="case-flow-step"><i>4</i>Fix</span>
+            </div>
+          </div>
+
+          <button class="case-toggle-btn" data-target="wi-discovery-case" aria-expanded="false">
+            Read Case Study <i class="fa fa-chevron-down"></i>
+          </button>
+        </div>
+
+        <div class="case-body" id="wi-discovery-case" style="display:none;">
+          <div class="case-section">
+            <h4>Problem</h4>
+            <p>Apply rate on job cards was underperforming and <strong>nobody knew why</strong> - no established link to pagination, layout, or ranking, just a weak number. So the first step was finding out what candidates were actually trying to do on that screen.</p>
+          </div>
+
+          <div class="case-section">
+            <h4>First Move: Ask the Users</h4>
+            <p>A <strong>preference survey</strong> on how candidates want to reach employers came back clear: <strong>45% preferred a WhatsApp CTA</strong> against <strong>18% who would call a recruiter directly</strong> - a mismatch with the calling-first flow we pushed them into.</p>
+            <p>Shipped a <strong>WhatsApp HR CTA</strong> on job cards with design and engineering. It worked: <strong>+30% Lands-to-Apply</strong>.</p>
+          </div>
+
+          <div class="case-section">
+            <h4>Still Short: Build the Heatmap</h4>
+            <p>The CTA won and apply rate was still below target - the survey had found <em>a</em> problem, not <em>the</em> problem. So I <strong>built a click heatmap from raw event logs</strong>, mapping engagement by position on the listing page:</p>
+            <ul>
+              <li><strong>WhatsApp CTA taps were healthy</strong> - ruling the new surface out as the bottleneck.</li>
+              <li><strong>Clicks concentrated in the top cards</strong>, with sharp fall-off down the page.</li>
+              <li><strong>Users reached pagination fast</strong> - scanning, not evaluating.</li>
+              <li><strong>Pagination CTR ran ~2x the Apply rate</strong> - they were paging <em>past</em> our listings.</li>
+            </ul>
+          </div>
+
+          <div class="case-section">
+            <h4>Hypothesis</h4>
+            <p>Now there was a hypothesis worth testing: users paged past listings because there were <strong>too few per screen</strong> and the <strong>ordering was wrong</strong>. A discovery problem - not job supply, and no longer the CTA.</p>
+          </div>
+
+          <div class="case-section">
+            <h4>Approach</h4>
+            <ul>
+              <li>Benchmarked competitor listing pages, then raised density from <strong>10 to 20 jobs per page</strong> - testing the "too few per screen" half on its own.</li>
+              <li>With density held constant, shipped <strong>custom relevancy-ranking logic</strong> to test the ordering half independently.</li>
+            </ul>
+          </div>
+
+          <div class="case-section">
+            <h4>Key Decisions</h4>
+            <ul>
+              <li><strong>Ask before assuming:</strong> with no known cause, talking to users beat redesigning on instinct.</li>
+              <li><strong>Don't let a win close the investigation:</strong> +30% made it easy to declare victory - the apply-rate metric said otherwise.</li>
+              <li><strong>Heatmap over aggregates:</strong> funnel totals say "conversion is low"; position-level data says "ordering is wrong". Only one is actionable.</li>
+              <li><strong>Lands-to-Apply, not taps:</strong> a CTA tapped without producing applications adds noise for employers.</li>
+            </ul>
+          </div>
+
+          <div class="case-section">
+            <h4>What I'd Do Next</h4>
+            <ul>
+              <li>Make the heatmap a <strong>standing instrument</strong>, so the next ordering regression surfaces on its own.</li>
+              <li><strong>Ranking weights per segment</strong>, plus <strong>apply-intent prediction</strong> and <strong>recruiter response SLA</strong> as ranking signals.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 3: WorkIndia — CLM Channel Efficiency & Lifecycle Growth -->
+      <div class="case-card mb-4" id="wi-clm-case-card">
+        <div class="case-card-header">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <h3 class="case-title mb-0">WorkIndia - CLM Channel Efficiency &amp; Lifecycle Growth</h3>
+            <span class="read-metadata"><i class="fa fa-clock-o"></i> 4m read</span>
+          </div>
+          <div class="case-tags">
+            <span class="tag">Growth</span>
+            <span class="tag">Bandits</span>
+            <span class="tag">Cost Efficiency</span>
+            <span class="tag">Lifecycle</span>
+          </div>
+
+          <div class="case-skim">
+            <p class="case-tldr">Spend was outgrowing DAU, so send-time became a contextual bandit rewarded on applications rather than opens - plus algorithm reuse and a new email channel.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><strong>−23%</strong><span>cost per DAU</span></div>
+              <div class="case-metric"><strong>+17%</strong><span>DAU</span></div>
+              <div class="case-metric"><strong>₹1.2L</strong><span>infra saved</span></div>
+            </div>
+            <div class="case-flow">
+              <span class="case-flow-step"><i>1</i>Analyse</span>
+              <span class="case-flow-step"><i>2</i>Bandit</span>
+              <span class="case-flow-step"><i>3</i>Reuse</span>
+              <span class="case-flow-step"><i>4</i>Email</span>
+            </div>
+          </div>
+
+          <button class="case-toggle-btn" data-target="wi-clm-case" aria-expanded="false">
+            Read Case Study <i class="fa fa-chevron-down"></i>
+          </button>
+        </div>
+
+        <div class="case-body" id="wi-clm-case" style="display:none;">
+          <div class="case-section">
+            <h4>Problem</h4>
+            <p>CLM spend was growing faster than the DAU it produced. Campaigns optimised for opens - a metric that rewards sending more, more often - so blended cost-per-DAU climbed while heavily-messaged users disengaged.</p>
+          </div>
+
+          <div class="case-section">
+            <h4>Hypothesis</h4>
+            <p>Send <em>timing</em>, algorithm <em>reuse</em>, and channel <em>mix</em> are bigger levers than volume. Optimise each user's send moment against downstream value, reuse the logic that already works, and add a genuinely cheap channel.</p>
+          </div>
+
+          <div class="case-section">
+            <h4>Approach</h4>
+            <ul>
+              <li><strong>Hourly behavioural, cohort, and notification-level analysis</strong> pinpointed send timing as the dominant efficiency driver.</li>
+              <li>Grew the <strong>Notification Time Affinity Model</strong> into a contextual <strong>Thompson Sampling</strong> system - picking each send window against downstream value, bounded by fatigue-aware caps.</li>
+              <li>Traced why in-app recommendation beat retargeting, then had engineering <strong>reuse the stronger algorithm</strong> across both via Kafka.</li>
+              <li>Launched <strong>Email re-engagement</strong> at ₹0.17 cost-per-DAU, segmented under-engaged cohorts into lifecycle initiatives, and shipped benchmarked notification design patterns.</li>
+            </ul>
+            <div class="seg-table-wrap">
+              <table class="seg-table">
+                <thead>
+                  <tr><th>Channel</th><th>Cost per DAU</th><th>vs. incumbent</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="seg-name">Existing campaigns</td><td>₹1.3</td><td>baseline</td></tr>
+                  <tr><td class="seg-name">Email re-engagement</td><td>₹0.17</td><td class="seg-delta">~8x cheaper</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="case-section">
+            <h4>Key Decisions</h4>
+            <ul>
+              <li><strong>Reward = applications, not opens:</strong> a bandit optimises what you pay it for, and opens teach it to spam.</li>
+              <li><strong>Frequency caps as a hard constraint:</strong> the cap bounds exploration instead of competing with it inside the reward.</li>
+              <li><strong>Reuse the proven algorithm:</strong> the performance gap was explained - the work was event plumbing, not modelling.</li>
+              <li><strong>Reallocate spend, don't cut it:</strong> efficiency went back into reach, so cheaper DAU didn't mean fewer DAU.</li>
+            </ul>
+          </div>
+
+          <div class="case-section">
+            <h4>Impact</h4>
             <div class="impact-grid">
               <div class="impact-item">
-                <strong>+7%</strong>
-                <span>Engagement Efficiency</span>
+                <strong>−23%</strong>
+                <span>Blended Cost-per-DAU</span>
               </div>
               <div class="impact-item">
-                <strong>+23%</strong>
-                <span>Budget Optimization</span>
+                <strong>₹1.2L</strong>
+                <span>Infra Saved</span>
               </div>
               <div class="impact-item">
-                <strong>+11%</strong>
-                <span>Targeting Relevance</span>
+                <strong>−13%</strong>
+                <span>Cost-per-Download</span>
+              </div>
+              <div class="impact-item">
+                <strong>+16%</strong>
+                <span>Retargeting CTR</span>
+              </div>
+              <div class="impact-item">
+                <strong>+22%</strong>
+                <span>Notification CTR</span>
+              </div>
+              <div class="impact-item">
+                <strong>+17%</strong>
+                <span>Daily Active Users</span>
+              </div>
+              <div class="impact-item">
+                <strong>~23%</strong>
+                <span>of CLM DAU from Email</span>
               </div>
             </div>
           </div>
 
           <div class="case-section">
-            <h4><span class="case-section-icon">🛠️</span> Engineered Systems</h4>
+            <h4>Engineered Systems</h4>
             <div class="nested-project-list">
               <!-- Nested Project 1 -->
               <div class="nested-project mb-2">
                 <button class="nested-toggle-btn w-100 text-start d-flex justify-content-between align-items-center" data-target="proj-notif" aria-expanded="false" style="min-width: auto;">
-                  <span><strong>Notification Time Affinity Model</strong></span>
+                  <span><strong>Notification Time Affinity Model (Contextual Thompson Sampling)</strong></span>
                   <i class="fa fa-chevron-down" style="position: static;"></i>
                 </button>
                 <div class="project-detail mt-2 p-3 nested-detail-box" id="proj-notif" style="display:none; font-size: 0.88rem; line-height: 1.5;">
-                  <p><strong>Problem:</strong> Generic broadcast notifications had poor CTR and contributed to user fatigue and unsubscribes.</p>
-                  <p><strong>System built:</strong> A cron-based segmentation engine that identifies each user's historical engagement window and schedules notifications within a personalised ±2-hour band.</p>
-                  <p><strong>Key decision:</strong> Chose a lightweight rule-based model over a heavy ML model to keep latency low and the system debuggable.</p>
+                  <p>One system, matured in two stages: per-user engagement-window scoring, grown into a <strong>contextual bandit</strong>. Arms are send-hour bands; context is segment, channel, recent engagement; reward is downstream application and retention value. Fatigue caps bound exploration per user.</p>
+                  <p><strong>Key decision:</strong> the rule-based affinity scores became the bandit's <em>prior</em>, so cold-start users get a sensible window instead of random exploration.</p>
+                  <p><strong>Impact:</strong> <strong>−23%</strong> Cost-per-DAU, <strong>₹1.2L</strong> infra saved.</p>
                 </div>
               </div>
 
               <!-- Nested Project 2 -->
               <div class="nested-project mb-2">
                 <button class="nested-toggle-btn w-100 text-start d-flex justify-content-between align-items-center" data-target="proj-copy" aria-expanded="false" style="min-width: auto;">
-                  <span><strong>Agentic Copy Writer</strong></span>
+                  <span><strong>Segment Auto-Refresh → Agentic Copy Writer</strong></span>
                   <i class="fa fa-chevron-down" style="position: static;"></i>
                 </button>
                 <div class="project-detail mt-2 p-3 nested-detail-box" id="proj-copy" style="display:none; font-size: 0.88rem; line-height: 1.5;">
-                  <p><strong>Problem:</strong> Manually writing notification copy for dozens of user segments was slow and inconsistent.</p>
-                  <p><strong>System built:</strong> An agentic pipeline that takes a segment profile + job category as input and generates personalised, on-brand copy variants for A/B testing ready for direct injection into the campaign scheduler.</p>
-                  <p><strong>Impact:</strong> Read-rates improved by <strong>15.6%</strong>, click-rates by <strong>4%</strong>, and click-to-install rates by <strong>9.2%</strong>.</p>
-                  <p><strong>Key decision:</strong> Used structured output + prompt guards to ensure copy remained within character limits and brand voice guidelines automatically.</p>
+                  <p>One pipeline, two stages. <em>Auto-refresh:</em> every 14 days, recompute time-affinity and engagement over the trailing 30 days and re-bucket any user whose window shifted &gt;20%, logging changes for audit. <em>Copy generation:</em> the refreshed segment profile plus job category feeds an LLM pipeline producing on-brand variants with character-limit guards, injected into the campaign scheduler.</p>
+                  <p><strong>Key decision:</strong> copy regenerates <em>because</em> segments moved - refreshing the audience while the message stays frozen was the failure mode this removes.</p>
+                  <p><strong>Impact:</strong> read-rates <strong>+15.6%</strong>, clicks <strong>+4%</strong>, click-to-install <strong>+9.2%</strong>.</p>
                 </div>
               </div>
 
               <!-- Nested Project 3 -->
               <div class="nested-project mb-2">
                 <button class="nested-toggle-btn w-100 text-start d-flex justify-content-between align-items-center" data-target="proj-data" aria-expanded="false" style="min-width: auto;">
-                  <span><strong>Dimensional Data Modeling</strong></span>
+                  <span><strong>Dimensional Data Model</strong></span>
                   <i class="fa fa-chevron-down" style="position: static;"></i>
                 </button>
                 <div class="project-detail mt-2 p-3 nested-detail-box" id="proj-data" style="display:none; font-size: 0.88rem; line-height: 1.5;">
-                  <p><strong>Problem:</strong> Ad-hoc queries for notification metrics were slow, inconsistent, and hard to reproduce across teams.</p>
-                  <p><strong>System built:</strong> A star-schema data model with a notifications fact table (one row per event), dimension tables for time, channel, segment, and job category, and pre-built aggregators for L0 metrics.</p>
-                  <p><strong>Key decision:</strong> Designed for query-time flexibility; raw events in the fact table, not pre-aggregated so new metric definitions don't require schema changes.</p>
+                  <p>Star schema with a notifications fact table (one row per event), dimensions for time, channel, segment, and job category, and pre-built aggregators for the L0 funnel (sent → delivered → read → clicked → applied). Built because cost and engagement numbers disagreed depending on who pulled them.</p>
+                  <p><strong>Key decision:</strong> raw events in the fact table, not pre-aggregated - so new metric definitions don't require schema changes.</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="case-section">
-            <h4><span class="case-section-icon">🚀</span> What I'd Do Next</h4>
+            <h4>What I'd Do Next</h4>
             <ul>
-              <li>Build a real-time feedback loop: if a user ignores 3 consecutive notifications, suppress for 5 days and re-enter with a completely different job category.</li>
-              <li>Run an A/B test on notification copy: data-driven subject lines vs. benefit-led copy.</li>
-              <li>Explore multi-arm bandit allocation for budget across channels moving from rule-based to adaptive allocation.</li>
+              <li>Extend the bandit to <strong>cross-channel budget allocation</strong> - same reward signal deciding WhatsApp vs push vs email.</li>
+              <li>Add a permanent no-contact <strong>holdout for incrementality</strong>, and learn <strong>fatigue caps per segment</strong> instead of setting them globally.</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- Case Study 2: Hevo Data -->
+      <!-- Case Study 4: WorkIndia — Acquisition Funnel Experimentation -->
+      <div class="case-card mb-4" id="wi-acquisition-case-card">
+        <div class="case-card-header">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <h3 class="case-title mb-0">WorkIndia - Acquisition Funnel Experimentation</h3>
+            <span class="read-metadata"><i class="fa fa-clock-o"></i> 2m read</span>
+          </div>
+          <div class="case-tags">
+            <span class="tag">Experimentation</span>
+            <span class="tag">Statistics</span>
+            <span class="tag">Acquisition</span>
+          </div>
+
+          <div class="case-skim">
+            <p class="case-tldr">A 1M+ daily visitor funnel was being changed on intuition, so I installed a hypothesis → power → guardrail loop and gated rollout on significance.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><strong>+6.2%</strong><span>Clicks-to-Leads</span></div>
+              <div class="case-metric"><strong>1M+</strong><span>daily visitors</span></div>
+              <div class="case-metric"><strong>Stat-sig</strong><span>rollout gate</span></div>
+            </div>
+            <div class="case-flow">
+              <span class="case-flow-step"><i>1</i>Hypothesise</span>
+              <span class="case-flow-step"><i>2</i>Power</span>
+              <span class="case-flow-step"><i>3</i>Test</span>
+              <span class="case-flow-step"><i>4</i>Gate</span>
+            </div>
+          </div>
+
+          <button class="case-toggle-btn" data-target="wi-acq-case" aria-expanded="false">
+            Read Case Study <i class="fa fa-chevron-down"></i>
+          </button>
+        </div>
+
+        <div class="case-body" id="wi-acq-case" style="display:none;">
+          <div class="case-section">
+            <h4>Problem</h4>
+            <p>A funnel serving <strong>1M+ daily visitors</strong> was being changed on intuition. Wins were declared from directional movement and losses explained away, with no shared standard for what counted as evidence.</p>
+          </div>
+
+          <div class="case-section">
+            <h4>Hypothesis</h4>
+            <p>At this traffic volume, a disciplined loop - stated hypothesis, powered sample size, pre-declared guardrails - surfaces real lift that eyeballing dashboards misses, and stops us shipping changes that only look positive.</p>
+          </div>
+
+          <div class="case-section">
+            <h4>Approach</h4>
+            <ul>
+              <li>Owned experimentation strategy: which hypotheses were worth testing and in what order, on an <strong>effort-vs-impact</strong> read.</li>
+              <li>Set <strong>primary, secondary, and guardrail metrics</strong> before each launch (primary: Clicks-to-Leads), and sized every test for the effect it needed to detect - so a null meant "no effect worth having", not "not enough data".</li>
+              <li>Validated <strong>+6.2% Clicks-to-Leads</strong> through statistically significant A/B tests, feeding straight into the rollout decision.</li>
+            </ul>
+          </div>
+
+          <div class="case-section">
+            <h4>Key Decisions</h4>
+            <ul>
+              <li><strong>Clicks-to-Leads as primary:</strong> closest to business value here - upstream clicks are easy to inflate and prove nothing.</li>
+              <li><strong>Pre-declare success criteria:</strong> what separates an experiment from a search for a favourable slice.</li>
+              <li><strong>Gate on significance, not direction:</strong> a positive-looking underpowered result ships risk, not lift.</li>
+              <li><strong>One change per test:</strong> no bundling, so every shipped change had an attributable effect size.</li>
+            </ul>
+          </div>
+
+          <div class="case-section">
+            <h4>What I'd Do Next</h4>
+            <ul>
+              <li><strong>Sequential testing</strong> to shorten cycles without inflating false positives from repeated peeking.</li>
+              <li>An <strong>experiment registry</strong> so learnings compound, plus <strong>guardrail alerting during rollout</strong> to catch a winner that degrades something downstream.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 5: Hevo Data -->
       <div class="case-card mb-4" id="hevo-case-card">
         <div class="case-card-header">
           <div class="d-flex justify-content-between align-items-start mb-1">
@@ -521,6 +685,21 @@
             <span class="tag">Conversion</span>
             <span class="tag">Self-serve</span>
           </div>
+
+          <div class="case-skim">
+            <p class="case-tldr">Technical evaluators couldn't estimate cost before talking to sales - so I gave them a calculator, and a chatbot on the content pages that fed it.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><strong>+9%</strong><span>qualified leads</span></div>
+              <div class="case-metric"><strong>80+</strong><span>ETL pipelines</span></div>
+              <div class="case-metric"><strong>50+</strong><span>blogs instrumented</span></div>
+            </div>
+            <div class="case-flow">
+              <span class="case-flow-step"><i>1</i>Map funnel</span>
+              <span class="case-flow-step"><i>2</i>Build calculator</span>
+              <span class="case-flow-step"><i>3</i>Deploy bot</span>
+            </div>
+          </div>
+
           <button class="case-toggle-btn" data-target="hevo-case" aria-expanded="false">
             Read Case Study <i class="fa fa-chevron-down"></i>
           </button>
@@ -528,44 +707,26 @@
 
         <div class="case-body" id="hevo-case" style="display:none;">
           <div class="case-section">
-            <h4><span class="case-section-icon">🔍</span> Problem</h4>
-            <p>Technical evaluators visiting Hevo's Snowflake integration pages could not quickly estimate cost before reaching sales. This created friction in the buyer journey and reduced conversion rates from mid-funnel content.</p>
+            <h4>Problem</h4>
+            <p>Technical evaluators on Hevo's Snowflake integration pages couldn't estimate cost before reaching sales - friction in the buyer journey that cost conversion from mid-funnel content.</p>
           </div>
 
           <div class="case-section">
-            <h4><span class="case-section-icon">💡</span> Hypothesis</h4>
-            <p>A self-serve pricing calculator embedded at the point of technical evaluation would reduce the perceived barrier to reaching out, increasing qualified leads without additional marketing spend.</p>
+            <h4>Hypothesis</h4>
+            <p>A self-serve pricing calculator at the point of technical evaluation lowers the barrier to reaching out, increasing qualified leads with no extra marketing spend.</p>
           </div>
 
           <div class="case-section">
-            <h4><span class="case-section-icon">🔧</span> Approach</h4>
+            <h4>Approach</h4>
             <ul>
-              <li>Designed and implemented the <strong>Snowflake Pricing Calculator</strong> as an interactive tool on Hevo's content pages.</li>
-              <li>Developed a context-sensitive <strong>support chatbot</strong> (LangChain + Gemini 1.5 Flash + FAISS) deployed across 50+ technical blogs to intercept intent at the exact moment users needed help.</li>
-              <li>Administered 80+ ETL/ELT pipelines to ensure data flowing into analytics was reliable for downstream marketing attribution.</li>
+              <li>Built a <strong>Snowflake-based pricing tool</strong> - an interactive calculator on the content pages letting evaluators cost it out themselves.</li>
+              <li>Shipped a context-sensitive <strong>support chatbot</strong> (LangChain + Gemini 1.5 Flash + FAISS) across 50+ technical blogs, intercepting intent at the moment of need.</li>
+              <li>Resolved issues across <strong>80+ distributed ETL pipelines</strong> via log-level and metric-driven RCA, keeping attribution reporting accurate.</li>
             </ul>
           </div>
 
           <div class="case-section">
-            <h4><span class="case-section-icon">📊</span> Impact</h4>
-            <div class="impact-grid">
-              <div class="impact-item">
-                <strong>+25%</strong>
-                <span>MQL Increase</span>
-              </div>
-              <div class="impact-item">
-                <strong>+15%</strong>
-                <span>User Retention</span>
-              </div>
-              <div class="impact-item">
-                <strong>50+</strong>
-                <span>Blogs with chatbot</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="case-section">
-            <h4><span class="case-section-icon">🛠️</span> Engineered Systems</h4>
+            <h4>Engineered Systems</h4>
             <div class="nested-project-list">
               <div class="nested-project mb-2">
                 <button class="nested-toggle-btn w-100 text-start d-flex justify-content-between align-items-center" data-target="proj-hevo" aria-expanded="false" style="min-width: auto;">
@@ -574,8 +735,8 @@
                 </button>
                 <div class="project-detail mt-2 p-3 nested-detail-box" id="proj-hevo" style="display:none; font-size: 0.88rem; line-height: 1.5;">
                   <p><strong>Problem:</strong> Users dropping off technical blog pages couldn't self-serve answers, leading to lost prospects.</p>
-                  <p><strong>System built:</strong> LangChain + Gemini 1.5 Flash + FAISS RAG chatbot deployed on 50+ blogs with context-sensitive retrieval from Hevo's documentation.</p>
-                  <p><strong>Result:</strong> +15% retention on instrumented pages, with chatbot becoming a key lead-capture touchpoint.</p>
+                  <p><strong>System built:</strong> LangChain + Gemini 1.5 Flash + FAISS RAG chatbot deployed on 50+ blogs with context-sensitive retrieval from Hevo's documentation, with prompt guards keeping answers in brand voice and within token limits.</p>
+                  <p><strong>Result:</strong> Became a lead-capture touchpoint on otherwise passive content pages, and its unanswered-query log fed the content and documentation roadmap.</p>
                   <p><a href="https://hevo-ai-bot.streamlit.app/" target="_blank" class="project-link">View Live Demo →</a></p>
                 </div>
               </div>
@@ -583,17 +744,16 @@
           </div>
 
           <div class="case-section">
-            <h4><span class="case-section-icon">🚀</span> What I'd Do Next</h4>
+            <h4>What I'd Do Next</h4>
             <ul>
-              <li>Add usage-based pricing simulation (model actual Snowflake credits vs. Hevo's pipeline cost) to make the calculator more concrete.</li>
-              <li>Instrument chatbot conversations to identify the top 5 unanswered questions and create targeted content.</li>
-              <li>Test a "Get a personalised estimate" CTA at peak chatbot engagement moments.</li>
+              <li>Simulate actual Snowflake credits vs pipeline cost to make the calculator concrete.</li>
+              <li>Mine chatbot conversations for the top unanswered questions, and test a "personalised estimate" CTA at peak engagement.</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- Case Study 3: Samsung -->
+      <!-- Case Study 6: Samsung -->
       <div class="case-card mb-4" id="samsung-case-card">
         <div class="case-card-header">
           <div class="d-flex justify-content-between align-items-start mb-1">
@@ -605,6 +765,21 @@
             <span class="tag">NLP</span>
             <span class="tag">Anomaly Detection</span>
           </div>
+
+          <div class="case-skim">
+            <p class="case-tldr">Unexplained moderation flags were expensive to review - so every flag got an explanation grounded in the exact policy clause it allegedly violated.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><strong>86.3%</strong><span>accuracy</span></div>
+              <div class="case-metric"><strong>−40%</strong><span>false positives</span></div>
+              <div class="case-metric"><strong>32,000+</strong><span>documents</span></div>
+            </div>
+            <div class="case-flow">
+              <span class="case-flow-step"><i>1</i>Extract</span>
+              <span class="case-flow-step"><i>2</i>Classify</span>
+              <span class="case-flow-step"><i>3</i>Explain</span>
+            </div>
+          </div>
+
           <button class="case-toggle-btn" data-target="samsung-case" aria-expanded="false">
             Read Case Study <i class="fa fa-chevron-down"></i>
           </button>
@@ -612,21 +787,36 @@
 
         <div class="case-body" id="samsung-case" style="display:none;">
           <div class="case-section">
-            <h4><span class="case-section-icon">🔍</span> Problem</h4>
-            <p>Automated moderation of app policy violations was generating too many false positives, leading to review team overload and delays in legitimate app approvals.</p>
+            <h4>Problem</h4>
+            <p>Automated moderation generated too many false positives, overloading reviewers and delaying legitimate approvals. Reviewers couldn't see <em>why</em> something was flagged, so every borderline case cost a full manual read.</p>
           </div>
 
           <div class="case-section">
-            <h4><span class="case-section-icon">🔧</span> Approach</h4>
+            <h4>Hypothesis</h4>
+            <p>The bottleneck wasn't classifier accuracy - it was that an unexplained flag is expensive to review. Attach a grounded, policy-cited explanation and reviewers dismiss weak flags in seconds, cutting the false-positive burden at the same accuracy.</p>
+          </div>
+
+          <div class="case-section">
+            <h4>Approach</h4>
             <ul>
-              <li>Achieved <strong>86.3% accuracy</strong> in anomaly detection using Roberta-Large, fine-tuned on app policy datasets.</li>
-              <li>Built monitoring systems to detect anomalies in 10K+ user interactions at scale.</li>
-              <li>Implemented a RAG-based architecture with Llama 3.2 1B enabling explainable, context-aware flagging.</li>
+              <li><strong>32,000+ documents</strong> through scalable extraction pipelines, feeding both the classifier and the retrieval index.</li>
+              <li>Fine-tuned <strong>Roberta-Large</strong> for policy violation classification (<strong>86.3%</strong> held out), plus <strong>transformer summarization</strong> tuned on accuracy, throughput, and deployment efficiency together.</li>
+              <li>Anomaly monitoring over <strong>10K+ interactions</strong> via statistical baselines and sliding-window z-scores.</li>
+              <li>A <strong>RAG layer (Llama 3.2 1B)</strong> over a dense index of policy clauses, so each flag cited the clause it allegedly violated.</li>
             </ul>
           </div>
 
           <div class="case-section">
-            <h4><span class="case-section-icon">📊</span> Impact</h4>
+            <h4>Key Decisions</h4>
+            <ul>
+              <li><strong>Explainability over more accuracy:</strong> the last points of F1 cost more than making each flag cheap to adjudicate.</li>
+              <li><strong>Ground explanations in retrieved policy text:</strong> a fluent hallucination launders a wrong flag into a convincing one.</li>
+              <li><strong>A 1B base model on purpose:</strong> the explanation layer runs over every flag, so inference cost was a design constraint from the start.</li>
+            </ul>
+          </div>
+
+          <div class="case-section">
+            <h4>Impact</h4>
             <div class="impact-grid">
               <div class="impact-item">
                 <strong>86.3%</strong>
@@ -644,17 +834,314 @@
           </div>
 
           <div class="case-section">
-            <h4><span class="case-section-icon">🚀</span> What I'd Do Next</h4>
+            <h4>What I'd Do Next</h4>
             <ul>
-              <li>Add a human-in-the-loop feedback layer: reviewer corrections should retrain the model on a weekly cycle.</li>
-              <li>Explore confidence scoring to route only borderline cases (0.4–0.6 score) to human review, auto-approving or auto-rejecting the rest.</li>
+              <li>Retrain weekly on reviewer corrections - a human-in-the-loop feedback layer.</li>
+              <li>Route only borderline cases (0.4–0.6 confidence) to human review, auto-resolving the rest.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════════════
+         EXPERIENCE SECTION
+    ════════════════════════════════════════════════════════════ -->
+    <section id="experience" class="reveal">
+      <h2>Experience</h2>
+      <p class="section-sub">Where I've worked and the systems behind the results.</p>
+
+      <!-- ── WorkIndia ───────────────────────────────────────── -->
+      <div class="exp-role-card">
+        <div class="exp-role-header">
+          <div class="exp-role-left">
+            <img loading="lazy" decoding="async" width="88" height="66" src="assets/img/workindia-logo.webp" alt="WorkIndia" class="exp-role-logo">
+            <div>
+              <div class="exp-role-title">Data Analyst - Growth &amp; Product (CLM)</div>
+              <div class="exp-role-company">WorkIndia</div>
+            </div>
+          </div>
+          <div class="exp-role-period">May 2025 - Present</div>
+        </div>
+
+        <div class="exp-role-body">
+          <p class="exp-role-summary">De facto Product Manager for the Candidate Growth team - owning the CLM roadmap end-to-end, prioritising on effort-vs-impact, and running the experiments that prove whether we moved acquisition, activation, or retention.</p>
+
+          <div class="exp-role-cols">
+            <div class="exp-role-col">
+              <div class="exp-role-col-title">Activation & Onboarding</div>
+              <ul>
+                <li>Lifted <strong>OTP success 89.6% → 96.3%</strong> by diagnosing verification as the largest activation bottleneck and rebuilding it as a four-channel recovery ladder.</li>
+                <li><strong>98.2% on the login segment</strong> (~56% of volume) via one-tap saved-token re-auth, plus a secondary SMS vendor for delivery redundancy.</li>
+              </ul>
+            </div>
+            <div class="exp-role-col">
+              <div class="exp-role-col-title">Discovery & Conversion</div>
+              <ul>
+                <li><strong>+30% Lands-to-Apply</strong> - surveyed candidates (45% wanted a WhatsApp CTA vs 18% calling), then shipped a WhatsApp HR CTA with design and engineering.</li>
+                <li><strong>+6% then +8.1% Applies</strong> - a self-built click heatmap exposed pagination CTR at ~2x the Apply rate, so density went 10 → 20 jobs/page and ranking became relevancy-based.</li>
+                <li><strong>+22% notification CTR</strong> from consumer-app design patterns: dynamic backgrounds, countdown timers, keyword highlighting, multi-CTA layouts.</li>
+              </ul>
+            </div>
+            <div class="exp-role-col">
+              <div class="exp-role-col-title">Lifecycle & Growth (CLM)</div>
+              <ul>
+                <li><strong>−23% Cost-per-DAU and ₹1.2L infra saved</strong> - the Notification Time Affinity Model, a contextual Thompson Sampling send-time system rewarded on applications, not opens.</li>
+                <li><strong>−13% Cost-per-Download, +16% CTR</strong> by tracing why in-app recommendation beat retargeting and reusing the stronger algorithm via Kafka.</li>
+                <li><strong>+17% DAU</strong> from lifecycle initiatives plus a new Email channel at ₹0.17 cost-per-DAU (vs ₹1.3), now ~23% of CLM DAU.</li>
+                <li><strong>+6.2% Clicks-to-Leads</strong> - owned experimentation strategy for a 1M+ daily visitor acquisition funnel.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-role-stack">
+            <span class="exp-stack-tag">A/B Testing</span>
+            <span class="exp-stack-tag">Experiment Design</span>
+            <span class="exp-stack-tag">Click Heatmap</span>
+            <span class="exp-stack-tag">Thompson Sampling</span>
+            <span class="exp-stack-tag">SQL / Athena</span>
+            <span class="exp-stack-tag">Python</span>
+            <span class="exp-stack-tag">Kafka</span>
+            <span class="exp-stack-tag">WhatsApp / SMS / Email / Push</span>
+            <span class="exp-stack-tag">BRD / PRD / ARD</span>
+            <span class="exp-stack-tag">Metabase</span>
+            <span class="exp-stack-tag">GitHub Projects</span>
+          </div>
+
+          <div class="exp-role-impact">
+            <a href="#wi-otp-case-card" class="exp-impact-chip">OTP Success 89.6% → 96.3%</a>
+            <a href="#wi-discovery-case-card" class="exp-impact-chip">+30% Lands-to-Apply</a>
+            <a href="#wi-clm-case-card" class="exp-impact-chip">−23% Cost-per-DAU</a>
+            <a href="#wi-clm-case-card" class="exp-impact-chip">+17% DAU</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Hevo Data ───────────────────────────────────────── -->
+      <div class="exp-role-card">
+        <div class="exp-role-header">
+          <div class="exp-role-left">
+            <img loading="lazy" decoding="async" width="88" height="52" src="assets/img/hevo-logo.webp" alt="Hevo Data" class="exp-role-logo">
+            <div>
+              <div class="exp-role-title">Technical Research Analyst</div>
+              <div class="exp-role-company">Hevo Data</div>
+            </div>
+          </div>
+          <div class="exp-role-period">Jun 2024 - Dec 2024</div>
+        </div>
+
+        <div class="exp-role-body">
+          <p class="exp-role-summary">Data infrastructure, AI product tooling, and content-driven conversion - systems that turned technical evaluators into qualified leads.</p>
+
+          <div class="exp-role-cols">
+            <div class="exp-role-col">
+              <div class="exp-role-col-title">Data Infrastructure</div>
+              <ul>
+                <li>Investigated and resolved issues across <strong>80+ distributed ETL pipelines</strong> (real-time and batch), improving reliability for downstream analytics and reporting.</li>
+                <li><strong>Log-level and metric-driven RCA</strong> across Snowflake, Redshift, and BigQuery destinations, plus <strong>Snowflake credit pricing</strong> in depth - warehouse sizing, query optimisation, per-pipeline cost attribution.</li>
+              </ul>
+            </div>
+            <div class="exp-role-col">
+              <div class="exp-role-col-title">Product & Conversion</div>
+              <ul>
+                <li><strong>+9% qualified leads</strong> from a Snowflake-based pricing tool - a self-serve calculator embedded at mid-funnel content pages.</li>
+                <li>Mapped the <strong>technical evaluator → MQL funnel</strong>, identifying pricing ambiguity as the primary drop-off driver - which motivated the calculator.</li>
+              </ul>
+            </div>
+            <div class="exp-role-col">
+              <div class="exp-role-col-title">AI Product Tooling</div>
+              <ul>
+                <li>Built a <strong>context-sensitive support chatbot</strong> (LangChain + Gemini 1.5 Flash + FAISS) on 50+ technical blogs with sub-second retrieval.</li>
+                <li><strong>Structured-output prompt engineering</strong> to hold brand voice and token limits, with usage instrumented to surface <strong>top unanswered queries</strong> for the content roadmap.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-role-stack">
+            <span class="exp-stack-tag">LangChain</span>
+            <span class="exp-stack-tag">Gemini 1.5 Flash</span>
+            <span class="exp-stack-tag">FAISS</span>
+            <span class="exp-stack-tag">Snowflake</span>
+            <span class="exp-stack-tag">REST APIs</span>
+            <span class="exp-stack-tag">Python</span>
+            <span class="exp-stack-tag">ETL/ELT</span>
+            <span class="exp-stack-tag">Redshift</span>
+          </div>
+
+          <div class="exp-role-impact">
+            <a href="#hevo-case-card" class="exp-impact-chip">+9% Qualified Leads</a>
+            <a href="#hevo-case-card" class="exp-impact-chip">80+ ETL Pipelines</a>
+            <a href="#hevo-case-card" class="exp-impact-chip">50+ Blogs Instrumented</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Samsung Prism ───────────────────────────────────── -->
+      <div class="exp-role-card">
+        <div class="exp-role-header">
+          <div class="exp-role-left">
+            <img loading="lazy" decoding="async" width="88" height="58" src="assets/img/prism-logo.webp" alt="Samsung Prism" class="exp-role-logo">
+            <div>
+              <div class="exp-role-title">Research &amp; Development Intern</div>
+              <div class="exp-role-company">Samsung Prism</div>
+            </div>
+          </div>
+          <div class="exp-role-period">Nov 2023 – May 2024</div>
+        </div>
+
+        <div class="exp-role-body">
+          <p class="exp-role-summary">ML systems for app policy violation detection - transformer classification and summarization, anomaly detection, and RAG explainability to cut false positives at scale.</p>
+
+          <div class="exp-role-cols">
+            <div class="exp-role-col">
+              <div class="exp-role-col-title">ML Modelling</div>
+              <ul>
+                <li>Fine-tuned <strong>Roberta-Large</strong> for multi-class policy violation classification on Samsung's app review dataset - <strong>86.3% accuracy</strong> held out.</li>
+                <li><strong>Transformer summarization models</strong> balancing accuracy, throughput, and deployment efficiency, plus <strong>anomaly monitoring over 10K+ interactions</strong> via sliding-window z-scores.</li>
+              </ul>
+            </div>
+            <div class="exp-role-col">
+              <div class="exp-role-col-title">Data Pipelines & RAG</div>
+              <ul>
+                <li>Processed <strong>32,000+ documents</strong> through scalable pipelines for structured extraction, feeding both the classifier and the retrieval index.</li>
+                <li><strong>−40% false positives</strong> from a <strong>RAG pipeline (Llama 3.2 1B)</strong> grounding every flag in a dense index of policy clauses - moderation became auditable, not hallucinated.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-role-stack">
+            <span class="exp-stack-tag">Roberta-Large</span>
+            <span class="exp-stack-tag">Llama 3.2</span>
+            <span class="exp-stack-tag">RAG</span>
+            <span class="exp-stack-tag">PyTorch</span>
+            <span class="exp-stack-tag">HuggingFace</span>
+            <span class="exp-stack-tag">Python</span>
+            <span class="exp-stack-tag">Summarization</span>
+            <span class="exp-stack-tag">Anomaly Detection</span>
+          </div>
+
+          <div class="exp-role-impact">
+            <a href="#samsung-case-card" class="exp-impact-chip">32,000+ Documents Processed</a>
+            <a href="#samsung-case-card" class="exp-impact-chip">86.3% Detection Accuracy</a>
+            <a href="#samsung-case-card" class="exp-impact-chip">−40% False Positives</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ═══════════════════════════════════════════════════════
+         EXPERIMENTATION & GROWTH SYSTEMS
+    ════════════════════════════════════════════════════════════ -->
+    <section id="experimentation" class="reveal">
+      <h2>Experimentation &amp; Growth Systems</h2>
+      <p class="section-sub">Infrastructure that makes decisions repeatable, not one-off.</p>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="exp-card">
+            <h3>Notification Time Affinity Model (Contextual Thompson Sampling)</h3>
+            <p>Send-time as a contextual bandit - rewarded on downstream value, bounded by fatigue caps.</p>
+            <button class="exp-toggle-btn" data-target="exp-bandit">View Logic <i class="fa fa-code"></i></button>
+            <div class="exp-detail" id="exp-bandit" style="display:none;">
+              <ol>
+                <li><strong>Arms:</strong> send-hour bands across the day.</li>
+                <li><strong>Context:</strong> segment, channel, recent engagement recency/frequency.</li>
+                <li><strong>Reward:</strong> applications and retention - explicitly <em>not</em> opens, so it can't win by learning to spam.</li>
+                <li><strong>Prior:</strong> rule-based engagement-window scores seed each posterior, so cold-start users skip random exploration.</li>
+                <li><strong>Constraint:</strong> fatigue caps bound exploration - a hard attention-budget limit, not a soft penalty in the reward.</li>
+              </ol>
+              <p class="mt-2"><strong>Result:</strong> −23% Cost-per-DAU, ₹1.2L infra saved.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="exp-card">
+            <h3>A/B Design on a 1M+ Visitor Funnel</h3>
+            <p>Stated hypothesis, powered sample size, pre-declared guardrails, significance gate before rollout.</p>
+            <button class="exp-toggle-btn" data-target="exp-ab">View Logic <i class="fa fa-code"></i></button>
+            <div class="exp-detail" id="exp-ab" style="display:none;">
+              <ol>
+                <li>Hypothesis as a falsifiable statement, not a goal - "X will raise Clicks-to-Leads because Y".</li>
+                <li>Declare <strong>primary</strong> (Clicks-to-Leads), <strong>secondary</strong>, and <strong>guardrail</strong> metrics before starting.</li>
+                <li>Size for the minimum effect worth shipping, so a null means "no meaningful effect", not "not enough traffic".</li>
+                <li>One change per test, so every shipped change carries an attributable effect size.</li>
+                <li>Gate rollout on significance, not on the direction the chart points.</li>
+              </ol>
+              <p class="mt-2"><strong>Result:</strong> +6.2% Clicks-to-Leads.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="exp-card">
+            <h3>Progressive Fallback Ladder (OTP)</h3>
+            <p>Channel recovery as a measured sequence - each rung ordered by evidence, measured on its own.</p>
+            <button class="exp-toggle-btn" data-target="exp-ladder">View Logic <i class="fa fa-code"></i></button>
+            <div class="exp-detail" id="exp-ladder" style="display:none;">
+              <ol>
+                <li><strong>Order:</strong> Primary SMS → WhatsApp → Secondary SMS → OTP Call, by measured delivery success, then latency, then user effort.</li>
+                <li>Each rung fires on the previous one's failure and is measured independently, so we know which rung actually recovers users.</li>
+                <li><strong>Guardrail:</strong> 5-second delivery tracked separately from eventual success - otherwise "success" is bought with slow retries.</li>
+                <li>Saved login tokens remove the ladder entirely for identifiable returning users; a second SMS vendor adds redundancy no routing logic could.</li>
+              </ol>
+              <p class="mt-2"><strong>Result:</strong> OTP success 89.6% → 96.3%; 5-sec delivery 88.2% → 96.6%.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="exp-card">
+            <h3>Diagnose → Ship → Re-diagnose</h3>
+            <p>The loop for when your first fix works and the metric still doesn't move.</p>
+            <button class="exp-toggle-btn" data-target="exp-diagnose">View Logic <i class="fa fa-code"></i></button>
+            <div class="exp-detail" id="exp-diagnose" style="display:none;">
+              <ol>
+                <li><strong>Ask:</strong> apply rate weak, no known cause - so survey candidates on how they want to reach employers.</li>
+                <li><strong>Signal:</strong> 45% preferred a WhatsApp CTA against 18% who would call directly.</li>
+                <li><strong>Ship &amp; measure on behaviour:</strong> WhatsApp HR CTA on job cards, judged on Lands-to-Apply rather than taps - <strong>+30%</strong>.</li>
+                <li><strong>Re-diagnose:</strong> apply rate still short, so the survey found <em>a</em> problem, not <em>the</em> problem. A click heatmap from raw event logs showed healthy CTA taps, clicks concentrated in top cards, and <strong>pagination CTR ~2x the Apply rate</strong>.</li>
+                <li><strong>Then hypothesise and ship:</strong> density 10 → 20 jobs/page (<strong>+6%</strong>), then relevancy ranking (<strong>+8.1%</strong>).</li>
+              </ol>
+              <p class="mt-2">A survey tells you what users say; a heatmap tells you what they do. This case needed both, in that order.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="exp-card">
+            <h3>Composite & Efficiency Metric Design</h3>
+            <p>Metrics built so a campaign can't win by sacrificing user trust, and so channels compare on one number.</p>
+            <button class="exp-toggle-btn" data-target="exp-metric">View Logic <i class="fa fa-code"></i></button>
+            <div class="exp-detail" id="exp-metric" style="display:none;">
+              <p><strong>Notification Health Score =</strong></p>
+              <code>(0.4 x Click Rate) + (0.4 x Application Rate) - (0.2 x Unsubscribe Rate)</code>
+              <p class="mt-2">Campaigns can't win by trading long-term trust for short-term clicks.</p>
+              <p class="mt-2"><strong>Blended Cost-per-DAU</strong> sits above it as the cross-channel north star - total spend over the DAU it produces. It makes WhatsApp, push, and email directly comparable, and it's what exposed Email at ₹0.17 against ₹1.3 elsewhere.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="exp-card">
+            <h3>Segment Refresh → Copy Regeneration Loop</h3>
+            <p>A 14-day cycle that doesn't just re-bucket users - it regenerates the copy those users receive.</p>
+            <button class="exp-toggle-btn" data-target="exp-refresh">View Logic <i class="fa fa-code"></i></button>
+            <div class="exp-detail" id="exp-refresh" style="display:none;">
+              <ol>
+                <li>Cron runs every 14 days, post-campaign cycle.</li>
+                <li>Re-computes time-affinity and engagement scores from the last 30 days of events.</li>
+                <li>Users whose engagement window drifted &gt;20% are re-bucketed, with every change logged for audit.</li>
+                <li><strong>Then:</strong> the refreshed segment profile plus job category feeds the Agentic Copy Writer, which regenerates on-brand variants with character-limit guards, injected into the campaign scheduler.</li>
+              </ol>
+              <p class="mt-2">The coupling is the point - refreshing the audience while the message stays frozen is the staleness this prevents.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ═══════════════════════════════════════════════════════
          SIDE PROJECTS
     ════════════════════════════════════════════════════════════ -->
     <section id="side-projects" class="reveal">
@@ -666,18 +1153,16 @@
         <div class="col-md-6">
           <div class="project-card">
             <div class="project-card-top">
-              <div class="project-icon">🚗</div>
               <div class="project-metric-badge">Evolved &gt; Programmed</div>
             </div>
             <div class="d-flex justify-content-between align-items-start mb-1">
-              <h4 class="project-title">EvoDrive - Genetic Algorithm Simulation</h4>
-              <span class="read-metadata"><i class="fa fa-clock-o"></i> 1m read</span>
+              <h3 class="project-title">EvoDrive - Genetic Algorithm Simulation</h3>
             </div>
             <p class="project-problem">Can evolutionary algorithms solve pathfinding better than rule-based systems?</p>
             <button class="project-toggle-btn" data-target="proj-evo">View Project <i class="fa fa-chevron-down"></i></button>
             <div class="project-detail" id="proj-evo" style="display:none;">
-              <p><strong>System built:</strong> A JavaScript simulation using genetic algorithms to evolve autonomous driving behaviours across 10,000+ generated scenarios; not hardcoded rules.</p>
-              <p><strong>Key learning:</strong> Systems that learn beat systems that follow rules, the same principle I apply to notification systems and budget allocation.</p>
+              <p><strong>System built:</strong> a JavaScript simulation evolving autonomous driving behaviours across 10,000+ scenarios via genetic algorithms - not hardcoded rules.</p>
+              <p><strong>Key learning:</strong> systems that learn beat systems that follow rules - the same principle behind the send-time bandit.</p>
               <p><a href="https://shubhampatel001.github.io/EvoDrive-Genetic-Algorithm-for-Autonomous-Driving/" target="_blank" class="project-link">View Project →</a></p>
             </div>
           </div>
@@ -687,18 +1172,15 @@
         <div class="col-md-6">
           <div class="project-card">
             <div class="project-card-top">
-              <div class="project-icon">🧠</div>
               <div class="project-metric-badge">Fine-tuned LLM for SQL</div>
             </div>
             <div class="d-flex justify-content-between align-items-start mb-1">
-              <h4 class="project-title mb-0">Text-to-SQL (StarCoder2 Fine-tune)</h4>
-              <span class="read-metadata"><i class="fa fa-clock-o"></i> 2m read</span>
+              <h3 class="project-title mb-0">Text-to-SQL (StarCoder2 Fine-tune)</h3>
             </div>
             <p class="project-problem">How cheap can you make an LLM that's actually good at SQL generation?</p>
             <button class="project-toggle-btn" data-target="proj-sql">View Project <i class="fa fa-chevron-down"></i></button>
             <div class="project-detail" id="proj-sql" style="display:none;">
-              <p><strong>Problem:</strong> Large text-to-SQL models are expensive to run; smaller models have poor SQL accuracy.</p>
-              <p><strong>System built:</strong> PEFT QLoRA fine-tuned StarCoder2-3B on SQL datasets in a resource-constrained environment achieving strong code generation at a fraction of the inference cost.</p>
+              <p><strong>System built:</strong> PEFT QLoRA fine-tune of StarCoder2-3B on SQL datasets under tight compute - strong generation at a fraction of the inference cost of large text-to-SQL models.</p>
               <p><a href="https://huggingface.co/Sayan18/finetune_starcoder2" target="_blank" class="project-link">View on HuggingFace →</a></p>
             </div>
           </div>
@@ -708,18 +1190,16 @@
         <div class="col-md-6">
           <div class="project-card">
             <div class="project-card-top">
-              <div class="project-icon">🔍</div>
               <div class="project-metric-badge">RAG Search Engine</div>
             </div>
             <div class="d-flex justify-content-between align-items-start mb-1">
-              <h4 class="project-title mb-0">Perplexa</h4>
-              <span class="read-metadata"><i class="fa fa-clock-o"></i> 2m read</span>
+              <h3 class="project-title mb-0">Perplexa</h3>
             </div>
             <p class="project-problem">A conversational engine capable of grounded, real-time web retrieval.</p>
             <button class="project-toggle-btn" data-target="proj-perplexa">View Project <i class="fa fa-chevron-down"></i></button>
             <div class="project-detail" id="proj-perplexa" style="display:none;">
-              <p><strong>System built:</strong> An advanced Retrieval-Augmented Generation pipeline integrating live web queries and dense vector retrieval for grounded answer synthesis.</p>
-              <p><strong>Key decision:</strong> Designed specific query structuring prompts to prevent the LLM from hallucinating answers when no high-confidence web results were returned.</p>
+              <p><strong>System built:</strong> a RAG pipeline combining live web queries with dense vector retrieval for grounded answer synthesis.</p>
+              <p><strong>Key decision:</strong> query-structuring prompts that suppress answers when no high-confidence web results come back.</p>
               <p><a href="https://github.com/sayan112207/Perplexa" target="_blank" class="project-link">View Project →</a></p>
             </div>
           </div>
@@ -729,18 +1209,16 @@
         <div class="col-md-6">
           <div class="project-card">
             <div class="project-card-top">
-              <div class="project-icon">📹</div>
               <div class="project-metric-badge">CV + Analytics Pipeline</div>
             </div>
             <div class="d-flex justify-content-between align-items-start mb-1">
-              <h4 class="project-title mb-0">Vehicle Movement Analysis & Insight Generation</h4>
-              <span class="read-metadata"><i class="fa fa-clock-o"></i> 1m read</span>
+              <h3 class="project-title mb-0">Vehicle Movement Analysis & Insight Generation</h3>
             </div>
             <p class="project-problem">Extracting structured, queryable data from unstructured video streams of vehicle traffic.</p>
             <button class="project-toggle-btn" data-target="proj-vehicle">View Project <i class="fa fa-chevron-down"></i></button>
             <div class="project-detail" id="proj-vehicle" style="display:none;">
-              <p><strong>System built:</strong> A computer vision pipeline that detects and tracks vehicle trajectories, emitting timestamped location events into a data warehouse for insight generation.</p>
-              <p><strong>Impact:</strong> Enabled downstream analytics to easily aggregate traffic flow metrics, choke points, and vehicle class distributions without manual intervention.</p>
+              <p><strong>System built:</strong> a CV pipeline tracking vehicle trajectories and emitting timestamped location events into a warehouse.</p>
+              <p><strong>Impact:</strong> traffic flow, choke points, and vehicle-class distributions became queryable without manual work.</p>
               <p><a href="https://github.com/Pushkar222-n/Intel-Unnati-project" target="_blank" class="project-link">View Project →</a></p>
             </div>
           </div>
@@ -749,65 +1227,7 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════
-         EXPERIMENTATION & GROWTH SYSTEMS
-    ════════════════════════════════════════════════════════════ -->
-    <section id="experimentation" class="reveal">
-      <h2>Experimentation &amp; Growth Systems</h2>
-      <p class="section-sub">Building infrastructure that makes decisions repeatable, not one-off.</p>
-
-      <div class="row g-3">
-        <div class="col-md-4">
-          <div class="exp-card">
-            <div class="exp-icon">🧪</div>
-            <h5>A/B Testing via Cron Segmentation</h5>
-            <p>Segmented user cohorts by engagement history to run controlled timing experiments moving from intuition-based send times to data-validated windows.</p>
-            <button class="exp-toggle-btn" data-target="exp-ab">View Logic <i class="fa fa-code"></i></button>
-            <div class="exp-detail" id="exp-ab" style="display:none;">
-              <ol>
-                <li>Segment users into buckets: Morning (6-10am), Afternoon (12-3pm), Evening (6-9pm) based on 30-day historical opens.</li>
-                <li>Hold 10% of each bucket as a control group receiving current default send time.</li>
-                <li>Measure CTR and downstream application rate (not just opens) as the primary success metric.</li>
-                <li>Promote winning window per segment after 14-day observation cycle.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="exp-card">
-            <div class="exp-icon">📐</div>
-            <h5>Metric Design (Weighted Metrics)</h5>
-            <p>Designed composite notification health metrics that balance engagement with user fatigue avoiding optimisation for a single vanity metric.</p>
-            <button class="exp-toggle-btn" data-target="exp-metric">View Logic <i class="fa fa-code"></i></button>
-            <div class="exp-detail" id="exp-metric" style="display:none;">
-              <p><strong>Notification Health Score =</strong></p>
-              <code>(0.4 x Click Rate) + (0.4 x Application Rate) - (0.2 x Unsubscribe Rate)</code>
-              <p class="mt-2">This formulation ensures that campaigns can't win by sacrificing long-term user trust for short-term clicks.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="exp-card">
-            <div class="exp-icon">🔄</div>
-            <h5>Auto-Refresh System (14-day cycle)</h5>
-            <p>Built a pipeline that automatically re-evaluates user segment assignments every 14 days based on fresh engagement data preventing segment staleness.</p>
-            <button class="exp-toggle-btn" data-target="exp-refresh">View Logic <i class="fa fa-code"></i></button>
-            <div class="exp-detail" id="exp-refresh" style="display:none;">
-              <ol>
-                <li>Cron job runs every 14 days post-campaign cycle.</li>
-                <li>Re-computes time affinity scores from last 30 days of event data.</li>
-                <li>Users with drift > 20% in engagement window are re-bucketed.</li>
-                <li>All changes logged for retrospective analysis and audit trail.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════════════
          PRODUCT THINKING SECTION
     ════════════════════════════════════════════════════════════ -->
     <section id="product-thinking" class="reveal">
@@ -818,49 +1238,49 @@
         <div class="col-md-6">
           <div class="principle-card">
             <div class="principle-num">01</div>
-            <h5>Optimise for downstream metrics, not vanity metrics</h5>
-            <p>Open rate is a proxy. Application rate is a business outcome. I always trace the metric chain to find what actually matters and set guardrails on the rest.</p>
+            <h3>Optimise for downstream metrics, not vanity metrics</h3>
+            <p>Open rate is a proxy; application rate is an outcome. I trace the metric chain to what actually matters, and guardrail the rest.</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="principle-card">
             <div class="principle-num">02</div>
-            <h5>Balance engagement with user fatigue</h5>
-            <p>More notifications ≠ more engagement. Every product decision has an attention budget. I always model the unsubscribe cost alongside the click gain before shipping a frequency change.</p>
+            <h3>Balance engagement with user fatigue</h3>
+            <p>More notifications ≠ more engagement. Every decision spends an attention budget, so I model unsubscribe cost alongside click gain.</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="principle-card">
             <div class="principle-num">03</div>
-            <h5>Prefer systems over one-off solutions</h5>
-            <p>A script that runs once is technical debt. A pipeline that runs every 14 days, logs itself, and handles edge cases is a product. I build for the second run, not the first.</p>
+            <h3>Prefer systems over one-off solutions</h3>
+            <p>A script that runs once is technical debt. A pipeline that reruns, logs itself, and handles edge cases is a product. I build for the second run.</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="principle-card">
             <div class="principle-num">04</div>
-            <h5>Use data to guide, not dictate decisions</h5>
-            <p>Data shows what happened; it rarely explains why. I combine quantitative signals with user behaviour intuition and business context never outsourcing the decision to a number alone.</p>
+            <h3>Use data to guide, not dictate decisions</h3>
+            <p>Data shows what happened, rarely why. I pair the numbers with behavioural context instead of outsourcing the decision to a metric.</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="principle-card">
             <div class="principle-num">05</div>
-            <h5>Ship experiments, not assumptions</h5>
-            <p>Every product strong opinion is a hypothesis in disguise. I default to small, fast experiments before committing to large builds; minimising the cost of being wrong.</p>
+            <h3>Ship experiments, not assumptions</h3>
+            <p>Every strong opinion is a hypothesis in disguise. Small fast experiments before large builds minimise the cost of being wrong.</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="principle-card">
             <div class="principle-num">06</div>
-            <h5>Make the invisible legible</h5>
-            <p>The best product insight is the one nobody sees yet, buried in event logs, latency spikes, or drop-off points. I treat data exploration as a product skill, not just an analytical one.</p>
+            <h3>Make the invisible legible</h3>
+            <p>The best insight is the one nobody sees yet - buried in event logs, latency spikes, drop-off points. Data exploration is a product skill.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════════════
          EDUCATION
     ════════════════════════════════════════════════════════════ -->
     <section id="education" class="reveal">
@@ -868,9 +1288,9 @@
       <div class="row">
         <div class="col-md-4 mb-3">
           <div class="card h-100">
-            <img src="/assets/img/kiit logo.png" alt="KIIT University Logo" class="card-img-top education-logo">
+            <img loading="lazy" decoding="async" width="225" height="225" src="/assets/img/kiit-logo.webp" alt="KIIT University Logo" class="card-img-top education-logo">
             <div class="card-body">
-              <h5 class="card-title">KIIT University</h5>
+              <h3 class="card-title">KIIT University</h3>
               <p class="card-text">
                 B.Tech in Computer Science (2021-2025)<br>
                 <em>CGPA: 8.9</em>
@@ -880,9 +1300,9 @@
         </div>
         <div class="col-md-4 mb-3">
           <div class="card h-100">
-            <img src="/assets/img/chaitanya logo.png" alt="Sri Chaitanya Logo" class="card-img-top education-logo">
+            <img loading="lazy" decoding="async" width="224" height="225" src="/assets/img/chaitanya-logo.webp" alt="Sri Chaitanya Logo" class="card-img-top education-logo">
             <div class="card-body">
-              <h5 class="card-title">Sri Chaitanya Techno School</h5>
+              <h3 class="card-title">Sri Chaitanya Techno School</h3>
               <p class="card-text">
                 All India Senior School Certificate Examination (2020-2021)<br>
                 <em>Percentage: 93%</em>
@@ -892,9 +1312,9 @@
         </div>
         <div class="col-md-4 mb-3">
           <div class="card h-100">
-            <img src="/assets/img/sps-logo.png" alt="St Patricks Logo" class="card-img-top education-logo">
+            <img loading="lazy" decoding="async" width="225" height="225" src="/assets/img/sps-logo.webp" alt="St Patricks Logo" class="card-img-top education-logo">
             <div class="card-body">
-              <h5 class="card-title">St. Patricks HS School</h5>
+              <h3 class="card-title">St. Patricks HS School</h3>
               <p class="card-text">
                 Indian Certificate of Secondary Education Examination (2018-2019)<br>
                 <em>Percentage: 92%</em>
@@ -905,14 +1325,14 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════════════
          PUBLICATIONS
     ════════════════════════════════════════════════════════════ -->
     <section id="publications" class="reveal">
       <h2>Publications</h2>
       <div class="card mb-3">
         <div class="card-body">
-          <h5 class="card-title">Precision Agriculture: Digital Twins and Advanced Crop Recommendation</h5>
+          <h3 class="card-title">Precision Agriculture: Digital Twins and Advanced Crop Recommendation</h3>
           <p class="card-text"><small class="text-muted">IEEE ICOCT 2025 (Feb 2025)</small></p>
           <p>
             Authors: <strong><em>Sayan Banerjee</em></strong>, Aniruddha Mukherjee, Suket Kamboj<br>
@@ -922,7 +1342,7 @@
       </div>
       <div class="card mb-3">
         <div class="card-body">
-          <h5 class="card-title">Efficient Waste Collection and Filtration using IOT</h5>
+          <h3 class="card-title">Efficient Waste Collection and Filtration using IOT</h3>
           <p class="card-text"><small class="text-muted">IJSREM (Jan 2023)</small></p>
           <p>
             Authors: <strong><em>Sayan Banerjee</em></strong>, Rahul Naugariya, Shubham Patel, Shubham Kumar<br>
@@ -932,21 +1352,21 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════════════
          SKILLS
     ════════════════════════════════════════════════════════════ -->
     <section id="skills" class="reveal">
       <h2>Skills</h2>
       <ul class="list-group">
-        <li class="list-group-item"><strong>Product & Analytics:</strong> A/B Testing, Metric Design, User Segmentation, Funnel Analysis, Growth Experiments, Data Storytelling</li>
-        <li class="list-group-item"><strong>Programming Languages:</strong> Python, SQL, JavaScript, C++, Java, HTML, CSS</li>
-        <li class="list-group-item"><strong>Data & ML:</strong> Machine Learning, Data Modeling, ETL/ELT, NLP, LLMs, RAG, Vector DBs</li>
-        <li class="list-group-item"><strong>Tools & Platforms:</strong> MySQL, Metabase, Redshift, Snowflake, Airflow, Sagemaker, Kafka, Git, VS Code</li>
-        <li class="list-group-item"><strong>Frameworks/Libraries:</strong> TensorFlow, PyTorch, PySpark, LangChain, HuggingFace, Flask, Streamlit, Bootstrap</li>
+        <li class="list-group-item"><strong>Product Management:</strong> GitHub Projects, Effort–Impact Prioritization, Product Docs (BRD/PRD/ARD/PIR), User Research, Competitive Benchmarking, Stakeholder Management</li>
+        <li class="list-group-item"><strong>Experimentation & Analytics:</strong> A/B Testing, Cohort & RFM Analysis, Hypothesis Testing, Experiment Design, Click Heatmap Analysis, KPI Tracking, Metric Design</li>
+        <li class="list-group-item"><strong>Growth & Lifecycle (CLM):</strong> WhatsApp, RCS, SMS, Email, Push, SEO, OTP Onboarding</li>
+        <li class="list-group-item"><strong>Technical:</strong> Python, SQL, PySpark, Pandas; Git, Kafka, JIRA, Confluence</li>
+        <li class="list-group-item"><strong>Data & ML (depth):</strong> Metabase, Athena, Snowflake, Dimensional Modelling, LLMs, RAG, Bandits/Thompson Sampling</li>
       </ul>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════════════
          ACHIEVEMENTS
     ════════════════════════════════════════════════════════════ -->
     <section id="achievements" class="mb-5 reveal">
@@ -955,7 +1375,7 @@
         <div class="col-md-6 col-lg-4 mb-3">
           <div class="card h-100">
             <div class="card-body">
-              <h6 class="card-title"><a href="https://drive.google.com/file/d/1TjcnVR7edxchEI_2-w1Y5fGdUJUpmniH/view?usp=sharing" target="_blank">Intel Unnati Industrial Training</a></h6>
+              <h3 class="card-title"><a href="https://drive.google.com/file/d/1TjcnVR7edxchEI_2-w1Y5fGdUJUpmniH/view?usp=sharing" target="_blank">Intel Unnati Industrial Training</a></h3>
               <p class="card-text"><strong>Intel</strong> (Jul 2024)</p>
             </div>
           </div>
@@ -963,7 +1383,7 @@
         <div class="col-md-6 col-lg-4 mb-3">
           <div class="card h-100">
             <div class="card-body">
-              <h6 class="card-title"><a href="https://www.coursera.org/account/accomplishments/professional-cert/P4YP7PHQZH5P" target="_blank">Data Science Professional Cert</a></h6>
+              <h3 class="card-title"><a href="https://www.coursera.org/account/accomplishments/professional-cert/P4YP7PHQZH5P" target="_blank">Data Science Professional Cert</a></h3>
               <p class="card-text"><strong>IBM</strong> (Apr 2024)</p>
             </div>
           </div>
@@ -971,7 +1391,7 @@
         <div class="col-md-6 col-lg-4 mb-3">
           <div class="card h-100">
             <div class="card-body">
-              <h6 class="card-title"><a href="https://drive.google.com/file/d/18d5WfoVulVl8PZi25z0dHMKLgUAZUNte/view?usp=sharing" target="_blank">1st Position in Eureka Innovation</a></h6>
+              <h3 class="card-title"><a href="https://drive.google.com/file/d/18d5WfoVulVl8PZi25z0dHMKLgUAZUNte/view?usp=sharing" target="_blank">1st Position in Eureka Innovation</a></h3>
               <p class="card-text"><strong>IIT Kharagpur</strong> (Feb 2024)</p>
             </div>
           </div>
@@ -979,7 +1399,7 @@
         <div class="col-md-6 col-lg-4 mb-3">
           <div class="card h-100">
             <div class="card-body">
-              <h6 class="card-title"><a href="https://drive.google.com/file/d/1T7pvgO8DlaF0bQFEvNr-t3HxsdFikDIl/view?usp=sharing" target="_blank">Certified Data Science Professional</a></h6>
+              <h3 class="card-title"><a href="https://drive.google.com/file/d/1T7pvgO8DlaF0bQFEvNr-t3HxsdFikDIl/view?usp=sharing" target="_blank">Certified Data Science Professional</a></h3>
               <p class="card-text"><strong>Oracle</strong> (Jul 2023)</p>
             </div>
           </div>
@@ -987,7 +1407,7 @@
         <div class="col-md-6 col-lg-4 mb-3">
           <div class="card h-100">
             <div class="card-body">
-              <h6 class="card-title"><a href="https://www.coursera.org/account/accomplishments/specialization/X2W5WFMKQDHY" target="_blank">Machine Learning Specialization</a></h6>
+              <h3 class="card-title"><a href="https://www.coursera.org/account/accomplishments/specialization/X2W5WFMKQDHY" target="_blank">Machine Learning Specialization</a></h3>
               <p class="card-text"><strong>DeepLearning.ai</strong> (Mar 2023)</p>
             </div>
           </div>
@@ -995,7 +1415,7 @@
         <div class="col-md-6 col-lg-4 mb-3">
           <div class="card h-100">
             <div class="card-body">
-              <h6 class="card-title"><a href="https://www.udemy.com/certificate/UC-fcf84b3e-49ec-4a0b-a5c0-aeabe49d00a4/" target="_blank">Applied Python</a></h6>
+              <h3 class="card-title"><a href="https://www.udemy.com/certificate/UC-fcf84b3e-49ec-4a0b-a5c0-aeabe49d00a4/" target="_blank">Applied Python</a></h3>
               <p class="card-text"><strong>Udemy</strong> (Dec 2022)</p>
             </div>
           </div>
@@ -1003,8 +1423,7 @@
       </div>
     </section>
 
-    <!-- Extra-Curricular -->
-    <section id="extra-curricular" class="reveal">
+<section id="extra-curricular" class="reveal">
       <h2>Extra-Curricular</h2>
       <ul class="list-group">
         <li class="list-group-item"><strong>1st Position</strong> at Inter Hostel Poetry Competition</li>
@@ -1014,8 +1433,7 @@
       </ul>
     </section>
 
-    <!-- Volunteering -->
-    <section id="volunteering" class="mb-5 reveal">
+<section id="volunteering" class="mb-5 reveal">
       <h2>Volunteering</h2>
       <ul class="list-group">
         <li class="list-group-item">
@@ -1027,16 +1445,13 @@
       </ul>
     </section>
 
-    </section>
-
-    <!-- Blogs -->
-    <section id="blogs" class="mb-5 reveal">
+<section id="blogs" class="mb-5 reveal">
       <div class="d-flex justify-content-between align-items-center mb-3">
         <h2 class="mb-0">Writing & Blogs</h2>
         <a href="https://medium.com/@sayan112207" target="_blank" class="project-link d-none d-md-block" style="font-size: 0.95rem;">View Medium Profile →</a>
       </div>
       <p style="color: var(--text-2); margin-bottom: 24px; font-size: 0.95rem; line-height: 1.6;">
-        I regularly write about product management, building experimentation systems, and translating data science into actionable growth strategies. Here are some of my top articles.
+        I write about product management, experimentation systems, and translating data science into growth strategy.
       </p>
 
       <div class="row g-4">
@@ -1045,9 +1460,9 @@
           <a href="https://medium.com/codex/finetuning-starcoder2-on-google-colab-t4-gpu-a7a416efde4e" target="_blank" style="text-decoration: none;">
             <div class="case-card d-flex flex-column h-100" style="padding: 24px;">
               <div class="d-flex justify-content-between align-items-start mb-2">
-                <h4 class="mb-0" style="font-size: 1.1rem; font-weight: 700; color: var(--text);">
+                <h3 class="mb-0" style="font-size: 1.1rem; font-weight: 700; color: var(--text);">
                   Fine-Tuning StarCoder2 on Google Colab (T4 GPU)
-                </h4>
+                </h3>
               </div>
               <p style="color: var(--text-2); font-size: 0.9rem; flex-grow: 1; margin-bottom: 0;">
                 A hands-on guide to fine-tuning large code models using limited compute. Covers LoRA-based optimization, memory-efficient training, and practical trade-offs when working with Colab GPUs.
@@ -1062,9 +1477,9 @@
           <a href="https://medium.com/@sayan112207/understanding-the-lottery-ticket-hypothesis-7d303f60616c" target="_blank" style="text-decoration: none;">
             <div class="case-card d-flex flex-column h-100" style="padding: 24px;">
               <div class="d-flex justify-content-between align-items-start mb-2">
-                <h4 class="mb-0" style="font-size: 1.1rem; font-weight: 700; color: var(--text);">
+                <h3 class="mb-0" style="font-size: 1.1rem; font-weight: 700; color: var(--text);">
                   Understanding the Lottery Ticket Hypothesis
-                </h4>
+                </h3>
               </div>
               <p style="color: var(--text-2); font-size: 0.9rem; flex-grow: 1; margin-bottom: 0;">
                 Breaks down how sparse subnetworks can outperform full models, and what this means for efficient deep learning, model pruning, and scalable deployment strategies.
@@ -1080,11 +1495,13 @@
       </div>
     </section>
 
+
+
   </main>
 
   <footer>
     <div class="container">
-      <p><i class="fa fa-envelope-square" style="color:var(--text-3)"></i> Contact: <a href="javascript:void(0)" class="copy-trigger" data-copy="sayan112207@gmail.com">sayan112207@gmail.com</a></p>
+      <p><i class="fa fa-envelope-square" style="color:var(--text-3)"></i> Contact: <a href="mailto:sayan112207@gmail.com" class="copy-trigger" data-copy="sayan112207@gmail.com">sayan112207@gmail.com</a></p>
       <p><i class="fa fa-github" style="color:var(--text-3)"></i> GitHub: <a href="https://github.com/sayan112207" target="_blank">github.com/sayan112207</a></p>
       <p><i class="fa fa-linkedin-square" style="color:#0077B5"></i> LinkedIn: <a href="https://www.linkedin.com/in/sayan18/" target="_blank">linkedin.com/in/sayan18</a></p>
       <p><i class="fa fa-graduation-cap" style="color:#0077B5"></i> Google Scholar: <a href="https://scholar.google.com/citations?user=VOelkfcAAAAJ&hl=en" target="_blank">scholar.google.com/citations?user=Sayan-Banerjee</a></p>

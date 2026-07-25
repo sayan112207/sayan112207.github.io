@@ -3,8 +3,73 @@
    Stack: Bootstrap 5 + vanilla CSS
    ═══════════════════════════════════════════════════════════ */
 
-/* ── Google Fonts ── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;700&display=swap');
+/* ── Fonts (self-hosted, variable) ──
+   Previously an @import of Google Fonts, which created a 3-hop critical chain
+   (html -> style.css -> css2 -> woff2). Fonts could not start downloading until
+   this stylesheet parsed, so they landed after first paint and reflowed
+   p.hero-sub — the entire 0.14 CLS. Now same-origin and preloaded in <head>.
+   Weight 300 was requested but never used, so it is gone. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../fonts/Inter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../fonts/Inter-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../fonts/Montserrat-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ── Metrics-matched fallbacks ──
+   Belt and braces for CLS: if a web font ever lands after first paint, the
+   fallback it replaces already occupies the same advance width, so text cannot
+   reflow. Ratios measured in-browser against Arial at matching weight:
+     Inter  400 1.0758 | 500 1.0854 | 600 1.0415 | 700 1.0506
+   Values were then tuned by sweeping size-adjust against the real rendered
+   geometry with the web fonts blocked, because canvas ratios don't account for
+   synthetic vs real bold. Heights change only when a line re-wraps, so each
+   family has a plateau of safe values - these sit inside it, not at its edge:
+     Montserrat headline is stable at >=112.5%  -> 113%
+     Inter hero-sub is stable across 106-113.5% -> 108%
+   Arial has no true 500/600, so the browser snaps them - hence one face for the
+   regular cluster and one for the bold cluster rather than a single average.
+   All line-heights here are explicit unitless multipliers, so ascent/descent
+   overrides are unnecessary. */
+@font-face {
+  font-family: 'Inter Fallback';
+  font-weight: 400 500;
+  src: local('Arial'), local('Helvetica'), local('Liberation Sans');
+  size-adjust: 108.0%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Inter Fallback';
+  font-weight: 600 700;
+  src: local('Arial'), local('Helvetica'), local('Liberation Sans');
+  size-adjust: 104.7%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Montserrat Fallback';
+  font-weight: 400 700;
+  src: local('Arial'), local('Helvetica'), local('Liberation Sans');
+  size-adjust: 113%;
+  line-gap-override: 0%;
+}
 
 /* ── Smooth Scroll ── */
 html {
@@ -67,7 +132,7 @@ html {
 /* ── Base ── */
 body {
   padding-top: 80px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
   font-size: 0.97rem;
   line-height: 1.7;
   background-color: var(--surface);
@@ -117,7 +182,7 @@ header {
 }
 
 .navbar-brand h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Montserrat Fallback', sans-serif;
   font-size: clamp(1.15rem, 5vw, 1.45rem);
   font-weight: 700;
   color: var(--text);
@@ -175,7 +240,7 @@ section {
 }
 
 section h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Montserrat Fallback', sans-serif;
   font-size: 1.65rem;
   font-weight: 700;
   color: var(--text);
@@ -221,22 +286,9 @@ section h2 {
   border-bottom: 1px solid var(--border);
 }
 
-.hero-badge {
-  display: inline-block;
-  background: var(--badge-bg);
-  color: var(--primary);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 5px 14px;
-  border-radius: 50px;
-  margin-bottom: 18px;
-  border: 1px solid #BFDBFE;
-}
 
 .hero-headline {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Montserrat Fallback', sans-serif;
   font-size: clamp(1.7rem, 4vw, 2.5rem);
   font-weight: 700;
   line-height: 1.25;
@@ -351,16 +403,13 @@ section h2 {
   transform: translateY(-5px);
   box-shadow: var(--card-shadow-hover);
 }
-.metric-icon {
-  font-size: 1.8rem;
-  margin-bottom: 8px;
-}
 .metric-value {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Montserrat Fallback', sans-serif;
   font-size: 2.2rem;
   font-weight: 700;
   color: var(--primary);
   line-height: 1;
+  margin-top: 2px;
   margin-bottom: 6px;
 }
 .metric-label {
@@ -423,7 +472,7 @@ section h2 {
 }
 
 .case-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Montserrat Fallback', sans-serif;
   font-size: 1.12rem;
   font-weight: 700;
   color: var(--text);
@@ -433,17 +482,19 @@ section h2 {
 .case-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
-  margin-bottom: 16px;
+  gap: 0 6px;
+  margin-bottom: 14px;
 }
 .tag {
-  background: var(--badge-bg);
-  color: var(--primary);
-  border: 1px solid #BFDBFE;
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 3px 10px;
-  border-radius: 50px;
+  color: var(--text-3);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.tag:not(:last-child)::after {
+  content: ' \00b7';
+  margin-left: 6px;
+  color: var(--text-3);
+  opacity: 0.55;
 }
 
 .case-toggle-btn {
@@ -490,11 +541,8 @@ section h2 {
   font-weight: 700;
   color: var(--text);
   margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  letter-spacing: 0.01em;
 }
-.case-section-icon { font-size: 1rem; }
 
 .case-section p,
 .case-section li {
@@ -519,7 +567,7 @@ section h2 {
 }
 .impact-item strong {
   display: block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Montserrat Fallback', sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--primary);
@@ -552,27 +600,19 @@ section h2 {
 .project-card-top {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-.project-icon {
-  font-size: 1.8rem;
-  line-height: 1;
+  justify-content: flex-end;
+  margin-bottom: 10px;
 }
 .project-metric-badge {
-  background: var(--success-bg);
-  border: 1px solid #A7F3D0;
-  color: #059669;
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 50px;
+  color: var(--text-3);
+  font-size: 0.72rem;
+  font-weight: 500;
   text-align: right;
   max-width: 60%;
 }
 
 .project-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Montserrat Fallback', sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text);
@@ -682,11 +722,8 @@ section h2 {
   transform: translateY(-4px);
   box-shadow: var(--card-shadow-hover);
 }
-.exp-icon {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-.exp-card h5 {
+.exp-card h3 {
+  margin-top: 2px;
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text);
@@ -856,37 +893,45 @@ section h2 {
 .exp-role-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
-  margin-bottom: 16px;
+  gap: 0 6px;
+  margin-bottom: 14px;
   padding-top: 14px;
   border-top: 1px solid var(--border);
 }
 
 .exp-stack-tag {
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  color: var(--text-2);
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 4px 11px;
-  border-radius: 50px;
+  color: var(--text-3);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.exp-stack-tag:not(:last-child)::after {
+  content: ' \00b7';
+  margin-left: 6px;
+  color: var(--text-3);
+  opacity: 0.55;
 }
 
 /* ── Impact chips ── */
 .exp-role-impact {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 0 8px;
 }
 
 .exp-impact-chip {
-  background: linear-gradient(135deg, var(--badge-bg), var(--success-bg));
-  border: 1px solid #BFDBFE;
-  color: var(--primary-dark);
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 5px 13px;
-  border-radius: 50px;
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition);
+}
+.exp-impact-chip:hover { border-bottom-color: var(--primary); }
+.exp-impact-chip:not(:last-child)::after {
+  content: ' \00b7';
+  margin-left: 8px;
+  color: var(--text-3);
+  opacity: 0.55;
 }
 
 a.exp-impact-chip {
@@ -920,7 +965,7 @@ a.exp-impact-chip:hover {
 }
 
 .principle-num {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Montserrat Fallback', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   color: #BFDBFE;
@@ -928,7 +973,7 @@ a.exp-impact-chip:hover {
   margin-bottom: 8px;
 }
 
-.principle-card h5 {
+.principle-card h3 {
   font-size: 0.92rem;
   font-weight: 700;
   color: var(--text);
@@ -943,6 +988,16 @@ a.exp-impact-chip:hover {
 /* ══════════════════════════════════════════════════════════
    EDUCATION / GENERIC CARDS
 ══════════════════════════════════════════════════════════ */
+/* Card titles are <h3> for correct heading order; Bootstrap would otherwise
+   size a bare h3 at calc(1.3rem + .6vw). These pin the pre-existing rendering. */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+#achievements .card-title { font-size: 1rem; }
+
 .education-logo {
   max-width: 8rem;
   height: 8rem;
@@ -1128,7 +1183,7 @@ input:checked + .slider .moon-icon {
   white-space: nowrap;
 }
 footer p { margin-bottom: 6px; }
-.copyright { margin-bottom: 0; color: var(--text-3); font-size: 0.8rem; }
+.copyright { margin-bottom: 0; color: var(--text-2); font-size: 0.8rem; }
 
 /* ══════════════════════════════════════════════════════════
    BACK TO TOP
@@ -1226,10 +1281,132 @@ footer p { margin-bottom: 6px; }
 }
 
 /* ══════════════════════════════════════════════════════════
+   CASE SKIM LAYER — always-visible summary on collapsed cards
+══════════════════════════════════════════════════════════ */
+.case-skim {
+  margin-bottom: 18px;
+}
+
+.case-tldr {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-2);
+  max-width: 68ch;
+  margin-bottom: 14px;
+}
+
+/* ── Metric chips ── */
+.case-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.case-metric {
+  background: linear-gradient(135deg, var(--badge-bg), var(--success-bg));
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 8px 14px;
+  min-width: 92px;
+  text-align: center;
+}
+.case-metric strong {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.case-metric span {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-3);
+  margin-top: 1px;
+}
+
+/* ── Numbered process flow ── */
+.case-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin-bottom: 16px;
+}
+.case-flow-step {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-2);
+}
+.case-flow-step i {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--primary);
+}
+.case-flow-step:not(:last-child)::after {
+  content: '\203A';
+  margin-left: 8px;
+  color: var(--text-3);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+
+/* ── Segment breakdown table ── */
+.seg-table-wrap {
+  overflow-x: auto;
+  margin-top: 14px;
+  -webkit-overflow-scrolling: touch;
+}
+.seg-table {
+  width: 100%;
+  min-width: 420px;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+.seg-table th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-3);
+  padding: 0 12px 7px 0;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.seg-table td {
+  padding: 9px 12px 9px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-2);
+  white-space: nowrap;
+}
+.seg-table th:not(:first-child),
+.seg-table td:not(:first-child) { text-align: right; }
+.seg-table tbody tr:last-child td { border-bottom: none; }
+.seg-table tbody tr.seg-total td {
+  border-top: 1.5px solid var(--border);
+  font-weight: 700;
+  color: var(--text);
+}
+.seg-table .seg-name { font-weight: 600; color: var(--text); }
+.seg-table .seg-delta,
+.seg-table tbody tr.seg-total td.seg-delta { color: var(--accent); font-weight: 700; }
+
+/* ══════════════════════════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════════════════════════ */
 @media (max-width: 992px) {
   .exp-role-cols { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .case-metric { flex-grow: 1; }
 }
 
 @media (max-width: 768px) {
@@ -1262,6 +1439,13 @@ footer p { margin-bottom: 6px; }
 @media (max-width: 480px) {
   .impact-grid { grid-template-columns: repeat(2, 1fr); }
   section h2 { font-size: 1.4rem; }
+
+  .case-tldr { font-size: 0.9rem; }
+  .case-metrics { gap: 8px; }
+  .case-metric { min-width: 0; flex: 1 1 calc(33% - 8px); padding: 7px 8px; }
+  .case-metric strong { font-size: 1rem; }
+  .case-metric span { font-size: 0.66rem; }
+  .seg-table { font-size: 0.78rem; }
 }
 /* Accordion Expand Animation */
 @keyframes slideDownFade {

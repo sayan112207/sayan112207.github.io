@@ -235,7 +235,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Project card toggles (rectangular expansion)
+  // Project card toggles — expand in place.
+  // The card keeps its grid cell so siblings never move; hiding them and
+  // promoting this one to col-12 used to yank the card ~226px up the page.
   document.querySelectorAll('.project-toggle-btn').forEach(btn => {
     btn.addEventListener('click', function () {
       const targetId = this.getAttribute('data-target');
@@ -244,34 +246,19 @@ document.addEventListener('DOMContentLoaded', function () {
       if (body.classList.contains('closing')) return;
 
       const isOpen = body.style.display === 'block';
-      const colContainer = this.closest('[class*="col-"]');
-      const originalColClass = Array.from(colContainer.classList).find(c => c.startsWith('col-md-')) || 'col-md-6';
-      const siblings = Array.from(colContainer.parentElement.children);
 
       this.classList.toggle('open', !isOpen);
-      
+      this.setAttribute('aria-expanded', String(!isOpen));
+
       if (!isOpen) { // opening
         body.style.display = 'block';
         this.childNodes[0].textContent = 'Close ';
-        // Hide siblings and expand this one
-        siblings.forEach(col => {
-          if (col !== colContainer) col.style.display = 'none';
-        });
-        colContainer.setAttribute('data-original-class', originalColClass);
-        colContainer.classList.remove(originalColClass);
-        colContainer.classList.add('col-12');
       } else { // closing
         this.childNodes[0].textContent = 'View Project ';
         body.classList.add('closing');
         setTimeout(() => {
           body.style.display = 'none';
           body.classList.remove('closing');
-          // Show siblings and restore width
-          siblings.forEach(col => {
-            col.style.display = '';
-          });
-          colContainer.classList.remove('col-12');
-          colContainer.classList.add(colContainer.getAttribute('data-original-class') || originalColClass);
         }, 340);
       }
     });
@@ -343,7 +330,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function animateCounter(el) {
     const target   = parseInt(el.getAttribute('data-target'), 10);
     const suffix   = el.getAttribute('data-suffix') || '';
-    const prefix   = el.getAttribute('data-prefix') || '+';
+    const prefix   = el.hasAttribute('data-prefix') ? el.getAttribute('data-prefix') : '+';
     const duration = 1600; // ms
     const start    = performance.now();
 
