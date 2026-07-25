@@ -1,18 +1,33 @@
-# Personal Portfolio Page
+# Portfolio — Sayan Banerjee
 
-### Hi there 👋
+APM / product & growth portfolio. Live at **[sayanbanerjee.pages.dev](https://sayanbanerjee.pages.dev/)** (Cloudflare Pages).
 
-<!--
-**sayan112207/sayan112207** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Static site, no build step: plain HTML, CSS and vanilla JS, with Bootstrap 5 for the grid.
 
-Here are some ideas to get you started:-->
+## Run locally
 
-- 🔭 I’m currently working on the field of Machine Learning, Artificial Intelligence, Deep Learning, and Machine UnLearning
-- 👯 I’m looking to collaborate with anyone and everyone
-- 💬 Ask me about Football, Music or Coding. I can help you with these.
-- 📫 How to reach me: <br>
-    <ul><li>LinkedIn: https://www.linkedin.com/in/sayan18/</li>
-        <li>Website: https://sayanbanerjee.pages.dev/</li>
-        <li>Mail: <a href="mailto:sayan112207@gmail.com">sayan112207@gmail.com</a></li></ul>
-- 😄 Pronouns: He/Him
-- ⚡ Fun fact: I actually do love Coding 😄
+```bash
+python3 -m http.server 8000
+```
+
+Open <http://localhost:8000>. The hostname redirect in `index.html` only fires on `sayan112207.github.io`, so localhost is unaffected.
+
+## Layout
+
+- `index.html` — the entire site, one page, including the inline JSON-LD `@graph`
+- `assets/css/style.css` — all styles, plus the self-hosted `@font-face` rules
+- `assets/fonts/` — Inter + Montserrat woff2, preloaded so web fonts don't shift layout
+- `assets/img/` — logos (WebP) and favicons
+- `script.js` — accordions, scroll reveal, animated counters, theme toggle
+- `resume/` — resume PDF and its viewer page
+- `robots.txt`, `sitemap.xml`, `llms.txt` — crawler files
+
+## Notes
+
+Metrics appear in the page copy, the JSON-LD, and `llms.txt`. The latter two are generated from the rendered DOM — regenerate them rather than editing by hand, so they can't drift from the page.
+
+## Contact
+
+- Website: <https://sayanbanerjee.pages.dev/>
+- LinkedIn: <https://www.linkedin.com/in/sayan18/>
+- Email: <sayan112207@gmail.com>
